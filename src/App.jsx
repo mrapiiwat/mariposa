@@ -4,7 +4,6 @@ import ServicePage from "./mariposa/ServicePage/ServicePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GameRoom from "./mariposa/GameRoom/GameRoom";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,9 +19,8 @@ const router = createBrowserRouter([
   },
   {
     path: "gameroom",
-    element: <GameRoom />
+    element: <GameRoom />,
   },
- 
 ]);
 
 function App() {

@@ -1,6 +1,6 @@
-import React from 'react'
-import NavLogin from '../../component/Nav/NavLogin'
-import './GameRoom.css'
+import React from "react";
+import NavLogin from "../../component/Nav/NavLogin";
+import "./GameRoom.css";
 
 const GameRoom = () => {
   return (
@@ -8,7 +8,7 @@ const GameRoom = () => {
       <NavLogin />
       <h1>Cream</h1>
     </div>
-  )
-}
+  );
+};
 
-export default GameRoom
+export default GameRoom;

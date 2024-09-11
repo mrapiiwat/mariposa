@@ -1,9 +1,6 @@
-@import '../../component/color.css';
+@import "../../component/color.css";
 
-@font-face {
-  font-family: "Anakotmai";
-  src: url(../../../public/Anakotmai.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -13,5 +10,10 @@
 }
 
 body {
+<<<<<<< HEAD
   
 }
+=======
+  font-family: "IBM Plex Sans Thai", sans-serif;
+}
+>>>>>>> 2f0153d9cbf73636a585c61f53c916710f5aeecc

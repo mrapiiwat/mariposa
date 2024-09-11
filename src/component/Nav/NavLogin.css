@@ -1,9 +1,6 @@
 @import "/src/component/color.css";
 
-@font-face {
-  font-family: "Anakotmai";
-  src: url(/public/Anakotmai.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -12,7 +9,7 @@
 }
 
 body {
-  font-family: "Anakotmai", sans-serif;
+  font-family: "IBM Plex Sans Thai", sans-serif;
 }
 
 nav {
@@ -45,18 +42,18 @@ nav {
         min-width: 200px;
         justify-content: space-evenly;
         cursor: pointer;
-        .userPic{
+        .userPic {
           width: 40px;
           border-radius: 50%;
         }
-        .p-name{
+        .p-name {
           font-size: 1.2rem;
           color: var(--color-primary);
           &:hover {
             opacity: 0.8;
           }
         }
-        .expand{
+        .expand {
           font-size: 1.5rem;
           position: absolute;
           right: 65px;
@@ -65,7 +62,6 @@ nav {
             opacity: 0.8;
           }
         }
-        
       }
     }
     .lang-con {
@@ -83,7 +79,7 @@ nav {
           opacity: 0.8;
         }
       }
-      .just-span{
+      .just-span {
         position: absolute;
         left: 25px;
         font-size: 2rem;
