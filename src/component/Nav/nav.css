@@ -28,12 +28,12 @@ nav {
     display: flex;
     justify-content: space-between;
     min-width: 600px;
-    ul {
+    .ul-nav {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       list-style: none;
       width: 50%;
-      li {
+      .li-nav {
         .menu-a {
           text-decoration: none;
           color: var(--color-primary);
@@ -63,7 +63,7 @@ nav {
       }
       .just-span {
         position: absolute;
-        left: 25px;
+        left: 45px;
         font-size: 2rem;
         color: var(--color-secondary);
       }

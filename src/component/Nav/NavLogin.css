@@ -28,7 +28,7 @@ nav {
     display: flex;
     justify-content: space-between;
     min-width: 600px;
-    ul {
+    .ul-nav-log {
       display: flex;
       justify-content: space-between;
       list-style: none;

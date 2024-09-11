@@ -14,8 +14,8 @@ const NavLogin = () => {
           </Link>
         </div>
         <div className="menu-con">
-          <ul>
-            <li>
+          <ul className="ul-nav-log">
+            <li className="li-nav-log">
               <img className="userPic" src={userPic} alt="" />
               <p className="p-name">Apiwat</p>
               <MdOutlineExpandMore className="expand" />
