@@ -5,7 +5,6 @@ import userPic from "../../assets/user.png";
 import mainlogo from "../../assets/libarylogo.png";
 import { MdOutlineExpandMore } from "react-icons/md";
 
-
 const NavLogin = () => {
   const [data, setData] = useState([
     {
@@ -27,8 +26,7 @@ const NavLogin = () => {
             <li>
               <img className="userPic" src={userPic} alt="" />
               <p className="p-name">Apiwat</p>
-              <MdOutlineExpandMore className="expand"/>
-
+              <MdOutlineExpandMore className="expand" />
             </li>
           </ul>
           <div className="lang-con">
