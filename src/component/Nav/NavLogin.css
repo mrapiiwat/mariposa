@@ -1,0 +1,94 @@
+@import "/src/component/color.css";
+
+@font-face {
+  font-family: "Anakotmai";
+  src: url(/public/Anakotmai.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Anakotmai", sans-serif;
+}
+
+nav {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: var(--color-tertiary);
+  .logo-con {
+    .main-logo {
+      width: 400px;
+      margin-top: 10px;
+    }
+  }
+  .menu-con {
+    display: flex;
+    justify-content: space-between;
+    min-width: 600px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      width: 50%;
+      position: relative;
+      margin-left: 70px;
+      li {
+        display: flex;
+        align-items: center;
+        min-width: 200px;
+        justify-content: space-evenly;
+        cursor: pointer;
+        .userPic{
+          width: 40px;
+          border-radius: 50%;
+        }
+        .p-name{
+          font-size: 1.2rem;
+          color: var(--color-primary);
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        .expand{
+          font-size: 1.5rem;
+          position: absolute;
+          right: 65px;
+          color: var(--color-primary);
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        
+      }
+    }
+    .lang-con {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 50%;
+      position: relative;
+      .lang-a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--color-secondary);
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      .just-span{
+        position: absolute;
+        left: 25px;
+        font-size: 2rem;
+        color: var(--color-secondary);
+      }
+    }
+  }
+}
