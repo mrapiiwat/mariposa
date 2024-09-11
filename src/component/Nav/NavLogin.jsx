@@ -1,18 +1,10 @@
 import "./NavLogin.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import userPic from "../../assets/user.png";
 import mainlogo from "../../assets/libarylogo.png";
 import { MdOutlineExpandMore } from "react-icons/md";
 
 const NavLogin = () => {
-  const [data, setData] = useState([
-    {
-      pic: { userPic },
-      id: crypto.randomUUID(),
-      name: "Apiwat",
-    },
-  ]);
   return (
     <>
       <nav>

@@ -4,8 +4,7 @@ import './ServicePage.css'
 const ServicePage = () => {
   return (
     <>
-      <Nav />
-      
+      <Nav />     
     </>
   )
 }
