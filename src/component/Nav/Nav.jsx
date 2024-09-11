@@ -12,7 +12,7 @@ const Nav = () => {
       <div className='menu-con'>
         <ul>
           <li><Link className='menu-a' to="about">เกี่ยวกับเรา</Link></li>
-          <li><Link className='menu-a' to="">บริการ</Link></li>
+          <li><Link className='menu-a' to="service">บริการ</Link></li>
         </ul>
         <div className='lang-con'>
           <Link className='lang-a' to="">ไทย</Link>
