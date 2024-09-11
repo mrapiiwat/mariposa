@@ -21,7 +21,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  background-color: var(--color-tertiary);
+  background-color: var(--color-cream);
   .logo-con {
     .main-logo {
       width: 400px;
@@ -40,7 +40,7 @@ nav {
       li {
         .menu-a {
           text-decoration: none;
-          color: var(--color-primary);
+          color: var(--color-orange);
           font-size: 1.5rem;
           font-weight: 600;
           padding: 10px;
@@ -60,7 +60,7 @@ nav {
         font-size: 1.5rem;
         text-decoration: none;
         font-weight: 600;
-        color: var(--color-secondary);
+        color: var(--color-darkblue);
         &:hover {
           opacity: 0.8;
         }
@@ -69,7 +69,7 @@ nav {
         position: absolute;
         left: 25px;
         font-size: 2rem;
-        color: var(--color-secondary);
+        color: var(--color-darkblue);
       }
     }
   }
