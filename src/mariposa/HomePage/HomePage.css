@@ -6,14 +6,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Anakotmai";
 }
 
 body {
-<<<<<<< HEAD
-  
-}
-=======
   font-family: "IBM Plex Sans Thai", sans-serif;
 }
->>>>>>> 2f0153d9cbf73636a585c61f53c916710f5aeecc
+
