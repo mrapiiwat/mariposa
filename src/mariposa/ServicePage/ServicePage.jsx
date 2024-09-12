@@ -1,12 +1,12 @@
-import Nav from '../../component/Nav/Nav'
-import './ServicePage.css'
+import Nav from "../../component/Nav/Nav";
+import "./ServicePage.css";
 
 const ServicePage = () => {
   return (
-    <>
-      <Nav />     
-    </>
-  )
-}
+    <div className="service-page-con">
+      <Nav />
+    </div>
+  );
+};
 
-export default ServicePage
+export default ServicePage;

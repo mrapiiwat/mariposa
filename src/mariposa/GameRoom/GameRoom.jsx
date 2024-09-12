@@ -4,7 +4,7 @@ import "./GameRoom.css";
 
 const GameRoom = () => {
   return (
-    <div>
+    <div className="game-room-con">
       <NavLogin />
       <h1>Cream</h1>
     </div>

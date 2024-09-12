@@ -4,7 +4,7 @@ import mainlogo from "../../assets/libarylogo.png";
 
 const Nav = () => {
   return (
-    <>
+    <div className="nav-con">
       <nav>
         <div className="logo-con">
           <Link to="/">
@@ -35,7 +35,7 @@ const Nav = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
