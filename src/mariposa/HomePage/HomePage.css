@@ -42,10 +42,11 @@
     .home-login-btn {
       background-color: var(--color-primary);
       border: none;
+      font-family: "IBM Plex Sans Thai", sans-serif;
       font-size: 1.7rem;
       font-weight: 600;
       color: white;
-      padding: 10px 100px;
+      padding: 5px 100px;
       border-radius: 50px;
       margin-top: 40px;
       &:hover {

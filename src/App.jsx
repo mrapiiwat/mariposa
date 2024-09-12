@@ -48,7 +48,6 @@ function App() {
         <div className="fade-content">
           <RouterProvider router={router} />
         </div>
-        
       )}
     </div>
   );
