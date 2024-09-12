@@ -8,10 +8,13 @@ const HomePage = () => {
       <main className="homePage-main-content">
         <div className="bulr-back"></div>
         <div className="home-content">
-          <h1 className="home-h1">หอสมุด<br />หมาวิยาลัยเมริโพซ่า</h1>
+          <h1 className="home-h1">
+            หอสมุด
+            <br />
+            หมาวิยาลัยเมริโพซ่า
+          </h1>
           <button className="home-login-btn">เข้าสู่ระบบ</button>
         </div>
-
       </main>
     </div>
   );
