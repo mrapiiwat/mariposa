@@ -2,6 +2,7 @@ import Nav from "../../component/Nav/Nav";
 import "./HomePage.css";
 
 const HomePage = () => {
+
   return (
     <div className="home-page-con">
       <Nav />
