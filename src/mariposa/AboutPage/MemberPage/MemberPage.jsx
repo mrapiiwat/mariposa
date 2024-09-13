@@ -5,9 +5,6 @@ import { useLocation, Link } from "react-router-dom";
 const MemberPage = () => {
   const location = useLocation();
   const { member } = location.state || {};
-  const handdleBack = () => {
-    window.history.back();
-  };
   return (
     <div className="memberPage-con">
       <Nav />
@@ -29,7 +26,12 @@ const MemberPage = () => {
           </div>
         </div>
         <div className="backto-about-btn-con">
-          <button onClick={handdleBack} className="backto-about-btn">
+          <button
+            onClick={() => {
+              window.history.back();
+            }}
+            className="backto-about-btn"
+          >
             กลับสู่หน้าเกี่ยวกับเรา
           </button>
         </div>
