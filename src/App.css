@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 
-.App{
+.App {
   background-color: #f2eee9;
 }
 
-.load-con{
+.load-con {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -18,7 +18,7 @@
     position: absolute;
     top: 70%;
   }
-  .Applogo{
+  .Applogo {
     width: 150px;
   }
 }
@@ -35,4 +35,3 @@
     opacity: 1;
   }
 }
-

@@ -33,7 +33,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
@@ -47,7 +46,12 @@ function App() {
       {loading ? (
         <div className="load-con">
           <img className="Applogo" src={Logo} alt="" />
-          <PulseLoader className="loader" loading={loading} size={5} color="#00408c"/>
+          <PulseLoader
+            className="loader"
+            loading={loading}
+            size={5}
+            color="#00408c"
+          />
         </div>
       ) : (
         <div className="fade-content">

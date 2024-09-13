@@ -10,37 +10,37 @@ const AboutPage = () => {
       fullName: "นายอิภิวัฒน์ ลานทอง",
       duty: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.",
       imgSm: "https://via.placeholder.com/200",
-      imgLg: "https://via.placeholder.com/350"
+      imgLg: "https://via.placeholder.com/350",
     },
     {
       fullName: "นางสาวนฤมล สีละมุด",
       duty: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.",
       imgSm: "https://via.placeholder.com/200",
-      imgLg: "https://via.placeholder.com/350"
+      imgLg: "https://via.placeholder.com/350",
     },
     {
       fullName: "นางสาวสุขหทัย พลยะเรศ",
       duty: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.",
       imgSm: "https://via.placeholder.com/200",
-      imgLg: "https://via.placeholder.com/350"
+      imgLg: "https://via.placeholder.com/350",
     },
     {
       fullName: "นางสาวเดือนเพ็ญ โฉมฉาย",
       duty: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.",
       imgSm: "https://via.placeholder.com/200",
-      imgLg: "https://via.placeholder.com/350"
+      imgLg: "https://via.placeholder.com/350",
     },
     {
       fullName: "นางสาวปิยธิดา อันชม",
       duty: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.",
       imgSm: "https://via.placeholder.com/200",
-      imgLg: "https://via.placeholder.com/350"
+      imgLg: "https://via.placeholder.com/350",
     },
     {
       fullName: "นายภูมิพัฒน์ เวฬุฬวรรณราช",
       duty: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.",
       imgSm: "https://via.placeholder.com/200",
-      imgLg: "https://via.placeholder.com/350"
+      imgLg: "https://via.placeholder.com/350",
     },
   ]);
 
@@ -70,11 +70,10 @@ const AboutPage = () => {
       <div className="memmer-con">
         <h4 className="h4-about">คณะผู้จัดทํา</h4>
         <div className="member">
-          
           {member.map((member, index) => {
             return (
               <div className="member-card" key={index}>
-                <Link to={'/member'} state={{member}}>
+                <Link to={"/member"} state={{ member }}>
                   <img
                     className="member-about-img"
                     src={member.imgSm}

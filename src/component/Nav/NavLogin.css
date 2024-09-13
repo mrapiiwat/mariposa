@@ -40,11 +40,11 @@ nav {
         min-width: 200px;
         justify-content: space-evenly;
         cursor: pointer;
-        .user-con{
+        .user-con {
           display: flex;
           justify-content: space-evenly;
           align-items: center;
-          &:hover{
+          &:hover {
             opacity: 0.8;
           }
           .expand {
@@ -62,7 +62,6 @@ nav {
           font-weight: 600;
           color: var(--color-primary);
         }
-        
       }
     }
     .lang-con {
