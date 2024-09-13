@@ -14,12 +14,12 @@ const Nav = () => {
         <div className="menu-con">
           <ul className="ul-nav">
             <li className="li-nav">
-              <Link className="menu-a" to="about">
+              <Link className="menu-a" to="/about">
                 เกี่ยวกับเรา
               </Link>
             </li>
             <li className="li-nav">
-              <Link className="menu-a" to="service">
+              <Link className="menu-a" to="/service">
                 บริการ
               </Link>
             </li>

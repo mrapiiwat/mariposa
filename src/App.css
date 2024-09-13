@@ -24,7 +24,7 @@
 }
 
 .fade-content {
-  animation: fade 1s;
+  animation: fade 2s;
 }
 
 @keyframes fade {

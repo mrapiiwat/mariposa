@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import PulseLoader from "react-spinners/PulseLoader";
 import "./App.css";
 import Logo from "./assets/mariposalogo1.png";
+import MemberPage from "./mariposa/AboutPage/MemberPage/MemberPage";
 
 const router = createBrowserRouter([
   {
@@ -14,16 +15,20 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: "about",
+    path: "/about",
     element: <AboutPage />,
   },
   {
-    path: "service",
+    path: "/service",
     element: <ServicePage />,
   },
   {
-    path: "gameroom",
+    path: "/gameroom",
     element: <GameRoom />,
+  },
+  {
+    path: "member",
+    element: <MemberPage />,
   },
 ]);
 

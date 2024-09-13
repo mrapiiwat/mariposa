@@ -50,10 +50,10 @@
       border-radius: 50px;
       margin-top: 40px;
       &:hover {
-        background-color: #b1422b;
+        background-color: #d84c2f;
       }
       &:active {
-        background-color: #8e2f1d;
+        background-color: #bc351a;
       }
       z-index: 1;
     }
