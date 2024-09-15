@@ -8,21 +8,6 @@
   background-color: #f2eee9;
 }
 
-.load-con {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .loader {
-    position: absolute;
-    top: 70%;
-  }
-  .Applogo {
-    width: 150px;
-  }
-}
-
 .fade-content {
   animation: fade 2s;
 }

@@ -8,6 +8,7 @@ import PulseLoader from "react-spinners/PulseLoader";
 import "./App.css";
 import Logo from "./assets/mariposalogo1.png";
 import MemberPage from "./mariposa/AboutPage/MemberPage/MemberPage";
+import Loader from "./component/Loader/Loader";
 
 const router = createBrowserRouter([
   {
@@ -34,25 +35,18 @@ const router = createBrowserRouter([
 
 function App() {
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (
     <div className="App">
       {loading ? (
-        <div className="load-con">
-          <img className="Applogo" src={Logo} alt="" />
-          <PulseLoader
-            className="loader"
-            loading={loading}
-            size={5}
-            color="#00408c"
-          />
-        </div>
+        <Loader loading={loading} />
       ) : (
         <div className="fade-content">
           <RouterProvider router={router} />
