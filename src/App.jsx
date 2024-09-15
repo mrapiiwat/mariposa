@@ -4,9 +4,7 @@ import ServicePage from "./mariposa/ServicePage/ServicePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GameRoom from "./mariposa/GameRoom/GameRoom";
 import { useState, useEffect } from "react";
-import PulseLoader from "react-spinners/PulseLoader";
 import "./App.css";
-import Logo from "./assets/mariposalogo1.png";
 import MemberPage from "./mariposa/AboutPage/MemberPage/MemberPage";
 import Loader from "./component/Loader/Loader";
 
