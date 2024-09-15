@@ -73,7 +73,7 @@ const AboutPage = () => {
           {member.map((member, index) => {
             return (
               <div className="member-card" key={index}>
-                <Link to={"/member"} state={{ member }}>
+                <Link to={"member"} state={{ member }}>
                   <img
                     className="member-about-img"
                     src={member.imgSm}

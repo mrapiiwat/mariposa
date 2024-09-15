@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     element: <GameRoom />,
   },
   {
-    path: "member",
+    path: "about/member",
     element: <MemberPage />,
   },
 ]);
