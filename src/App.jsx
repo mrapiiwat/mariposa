@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     element: <GameRoom />,
   },
   {
-    path: "member",
+    path: "about/member",
     element: <MemberPage />,
   },
 ]);
@@ -38,7 +38,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 2000);
   }, []);
 
   return (
