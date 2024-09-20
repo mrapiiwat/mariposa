@@ -8,5 +8,6 @@
 }
 .game-room-con {
   font-family: "IBM Plex Sans Thai", sans-serif;
-  height: calc(90px-100vh);
+  background-color: whitesmoke;
+  height: calc(100vh - 90px);
 }

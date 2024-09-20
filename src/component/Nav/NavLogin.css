@@ -7,6 +7,19 @@
   box-sizing: border-box;
 }
 
+body{
+  animation: fade 2s;
+  
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
 .nav-log-con {
   font-family: "IBM Plex Sans Thai", sans-serif;
 }
