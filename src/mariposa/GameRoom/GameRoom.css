@@ -6,22 +6,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-.game-room-con {
+
+.gr {
+  background-color: whitesmoke;
+  height: calc(100vh - 90px);
   font-family: "IBM Plex Sans Thai", sans-serif;
-  height: calc(100vh-90px);
-}
-.gr{
-  .gameroomheader{
+  .gameroomheader {
     position: relative;
     height: 300px;
-    .gamepic{
+    .gamepic {
       height: 100%;
       width: 100%;
-      object-fit : cover;
+      object-fit: cover;
       object-position: center -750px;
-     
     }
-    .blurgamepic{
+    .blurgamepic {
       position: absolute;
       background-color: rgba(0, 0, 0, 0.368);
       width: 100%;
@@ -29,16 +28,46 @@
       top: 0;
       z-index: 1;
     }
-    .gameroomname{
+    .gameroomname {
       position: absolute;
       font-weight: 900;
       font-size: 3rem;
       color: white;
-      top: 35%;
+      top: 40%;
       z-index: 10;
       left: 45%;
     }
   }
- 
+  .gameroom-main-content {
+    text-align: center;
+    margin-top: 30px;
+    .gameroomdate {
+      background-color: var(--color-primary);
+      width: 400px;
+      height: 50px;
+      font-size: 2rem;
+      font-weight: 600;
+      color: white;
+      margin: 0 auto;
+    }
+    .gameroom-rules-con {
+      margin-top: 35px;
+      .rules-title {
+        font-size: 2rem;
+        color: var(--color-secondary);
+      }
+      .gameroom-rules {
+        width: 750px;
+        margin: 15px auto 0;
+        text-align: start;
+        .rules-1,
+        .rules-2,
+        .rules-3 {
+          font-size: 1.5rem;
+          color: var(--color-secondary);
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }
-

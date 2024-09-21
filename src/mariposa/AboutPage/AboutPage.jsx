@@ -63,7 +63,7 @@ const AboutPage = () => {
             หอสมุดหมาวิทยาลัยแมริโพซ่าเป็นโปรเจกต์ <br /> ของรายวิชา CE 385
             การออกแบบสถาปัตยกรรมแอปพลิเคชั่น <br /> จัดทําโดยคณะผู้จัดทํา
             นักศึกษาชั้นปีที่ 3 วิทยาลัยนวัตกรรมด้านเทคโนโลยีและวิศวกรรมศาสตร์{" "}
-            <br /> สาขาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยธุรกิจบัณฑิต
+            <br /> สาขาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยธุรกิจบัณฑิตย์
           </p>
         </div>
       </div>
@@ -73,7 +73,7 @@ const AboutPage = () => {
           {member.map((member, index) => {
             return (
               <div className="member-card" key={index}>
-                <Link to={"/member"} state={{ member }}>
+                <Link to={"member"} state={{ member }}>
                   <img
                     className="member-about-img"
                     src={member.imgSm}

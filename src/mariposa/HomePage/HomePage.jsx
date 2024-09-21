@@ -11,7 +11,7 @@ const HomePage = () => {
           <h1 className="home-h1">
             หอสมุด
             <br />
-            หมาวิยาลัยเมริโพซ่า
+            มหาวิทยาลัยเมริโพซ่า
           </h1>
           <button className="home-login-btn">เข้าสู่ระบบ</button>
         </div>
