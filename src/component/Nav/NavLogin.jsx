@@ -16,6 +16,7 @@ const NavLogin = () => {
   ]);
 
   return (
+    
     <div className="nav-log-con">
       {loading ? (
         <Loader loading={loading} />
