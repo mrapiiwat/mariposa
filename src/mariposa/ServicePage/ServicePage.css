@@ -1,5 +1,48 @@
+@import "../../component/color.css";
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
 
-.service-page-con {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.servicepage-con {
   font-family: "IBM Plex Sans Thai", sans-serif;
+}
+.servicepage{
+  height: calc(400vh - 90px);
+  padding: 30px 50px;
+  background-color: whitesmoke;
+}
+.service_detail {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #e852342c;
+  position: relative;
+  border-radius: 35px;
+  font-size: 1.8rem;
+}
+
+.service_detail_left {
+  border-right : 4px solid #ff1818;
+  width: 60%;
+  padding: 20px;
+}
+
+.service_detail_right {
+  width: 40%;
+  padding: 20px;
+}
+
+.right_week , .right_weekend {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.left_golink {
+  position: absolute;
+  bottom: 15px;
 }
