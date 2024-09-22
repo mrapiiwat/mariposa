@@ -2,10 +2,11 @@ import NavLogin from "../../component/Nav/NavLogin";
 import "./GameRoom.css";
 import GameRoomImg from "../../assets/gameroom.jpg";
 import { useState, useEffect } from "react";
-
+import { useTranslation } from "react-i18next";
 
 const GameRoom = () => {
   const [date, setDate] = useState("");
+  const { t } = useTranslation();
   useEffect(() => {
     const updateDate = () => {
       const now = new Date();
@@ -49,5 +50,4 @@ const GameRoom = () => {
     </div>
   );
 };
-
 export default GameRoom;
