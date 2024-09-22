@@ -3,6 +3,7 @@ import "./GameRoom.css";
 import GameRoomImg from "../../assets/gameroom.jpg";
 import { useState, useEffect } from "react";
 
+
 const GameRoom = () => {
   const [date, setDate] = useState("");
   useEffect(() => {
@@ -23,7 +24,7 @@ const GameRoom = () => {
         <div className="gameroomheader">
           <img className="gamepic" src={GameRoomImg} alt="" />
           <div className="blurgamepic"></div>
-          <div className="gameroomname">ห้องเล่นเกม</div>
+          <div className="gameroomname">Game Room</div>
         </div>
         <div className="gameroom-main-content">
           <div className="gameroomdate">{date}</div>
