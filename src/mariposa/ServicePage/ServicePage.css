@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+/* Service detail CSS */
 .servicepage-con {
   font-family: "IBM Plex Sans Thai", sans-serif;
 }
@@ -19,7 +20,7 @@
   height: 90vh;
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
   background-color: #e852342c;
   position: relative;
   border-radius: 35px;
@@ -29,12 +30,25 @@
 .service_detail_left {
   border-right : 4px solid #ff1818;
   width: 60%;
-  padding: 20px;
+  padding: 30px ;
+  top: 90px;
+  color: var(--color-secondary);
+  .left_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
 }
 
 .service_detail_right {
   width: 40%;
-  padding: 20px;
+  padding: 30px;
+  color: var(--color-secondary);
+  .right_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
 }
 
 .right_week , .right_weekend {
@@ -44,5 +58,17 @@
 }
 .left_golink {
   position: absolute;
-  bottom: 15px;
+  bottom: 20px;
+}
+
+/* Floorplan CSS */
+.service_floorplan {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background-color: #e852342c;
+  position: relative;
+  border-radius: 35px;
+  font-size: 1.8rem;
 }
