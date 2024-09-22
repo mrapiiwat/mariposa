@@ -1,5 +1,4 @@
 @import "/src/component/color.css";
-
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
 
 * {
@@ -8,7 +7,20 @@
   box-sizing: border-box;
 }
 
-body {
+body{
+  animation: fade 2s;
+  
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.nav-log-con {
   font-family: "IBM Plex Sans Thai", sans-serif;
 }
 
@@ -29,38 +41,39 @@ nav {
     display: flex;
     justify-content: space-between;
     min-width: 600px;
-    ul {
+    .ul-nav-log {
       display: flex;
-      justify-content: space-between;
+      justify-content: end;
       list-style: none;
       width: 50%;
-      position: relative;
       margin-left: 70px;
-      li {
+      .li-nav-log {
         display: flex;
         align-items: center;
         min-width: 200px;
         justify-content: space-evenly;
         cursor: pointer;
+        .user-con {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          &:hover {
+            opacity: 0.8;
+          }
+          .expand {
+            font-size: 1.5rem;
+            right: 65px;
+            color: var(--color-primary);
+          }
+        }
         .userPic {
           width: 40px;
           border-radius: 50%;
         }
         .p-name {
           font-size: 1.2rem;
+          font-weight: 600;
           color: var(--color-primary);
-          &:hover {
-            opacity: 0.8;
-          }
-        }
-        .expand {
-          font-size: 1.5rem;
-          position: absolute;
-          right: 65px;
-          color: var(--color-primary);
-          &:hover {
-            opacity: 0.8;
-          }
         }
       }
     }

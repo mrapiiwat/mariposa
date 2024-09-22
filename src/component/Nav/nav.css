@@ -1,5 +1,4 @@
 @import "/src/component/color.css";
-
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
 
 * {
@@ -8,7 +7,7 @@
   box-sizing: border-box;
 }
 
-body {
+.nav-con {
   font-family: "IBM Plex Sans Thai", sans-serif;
 }
 
@@ -29,12 +28,12 @@ nav {
     display: flex;
     justify-content: space-between;
     min-width: 600px;
-    ul {
+    .ul-nav {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       list-style: none;
       width: 50%;
-      li {
+      .li-nav {
         .menu-a {
           text-decoration: none;
           color: var(--color-primary);
@@ -64,7 +63,7 @@ nav {
       }
       .just-span {
         position: absolute;
-        left: 25px;
+        left: 45px;
         font-size: 2rem;
         color: var(--color-secondary);
       }

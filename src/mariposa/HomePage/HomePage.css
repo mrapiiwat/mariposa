@@ -1,5 +1,4 @@
 @import "../../component/color.css";
-
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
 
 * {
@@ -8,7 +7,55 @@
   box-sizing: border-box;
 }
 
-body {
+.home-page-con {
   font-family: "IBM Plex Sans Thai", sans-serif;
 }
 
+.homePage-main-content {
+  height: calc(100vh - 90px);
+  background-image: url("../../assets/libarybackground.jpg");
+  background-size: cover;
+  background-position: calc(100px - 30px) 70%;
+  position: relative;
+  .bulr-back {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .home-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .home-h1 {
+      color: white;
+      font-size: 5rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 1;
+    }
+    .home-login-btn {
+      background-color: var(--color-primary);
+      border: none;
+      font-family: "IBM Plex Sans Thai", sans-serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: white;
+      padding: 5px 100px;
+      border-radius: 50px;
+      margin-top: 40px;
+      &:hover {
+        background-color: #d84c2f;
+      }
+      &:active {
+        background-color: #bc351a;
+      }
+      z-index: 1;
+    }
+  }
+}

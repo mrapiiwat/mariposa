@@ -1,12 +1,13 @@
 @import "../../component/color.css";
-
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
+.game-room-con {
   font-family: "IBM Plex Sans Thai", sans-serif;
-  height: calc(90px-100vh);
+  background-color: whitesmoke;
+  height: calc(100vh - 90px);
 }

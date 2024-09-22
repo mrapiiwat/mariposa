@@ -1,5 +1,4 @@
 @import "../../component/color.css";
-
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
 
 * {
@@ -8,6 +7,78 @@
   box-sizing: border-box;
 }
 
-body {
+.about-page-con {
   font-family: "IBM Plex Sans Thai", sans-serif;
+}
+
+.about-con {
+  height: calc(100vh - 90px);
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .aboutPage-logo-con {
+    height: calc(100vh / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    .about-page-logo {
+      width: 170px;
+      object-fit: cover;
+      margin-top: 10px;
+    }
+  }
+  .about-uni-name {
+    height: calc(100vh / 5);
+    .name-uni-aboutPage {
+      margin-top: 10px;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--color-secondary);
+      text-align: center;
+    }
+  }
+  .aboutPage-content-con {
+    height: calc(100vh / 2);
+    .aboutPage-text {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--color-secondary);
+    }
+  }
+}
+
+.memmer-con {
+  background-color: whitesmoke;
+  height: 100vh;
+  padding: 70px 0 0 0;
+  .h4-about {
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: 900;
+    margin-bottom: 40px;
+    color: var(--color-secondary);
+  }
+  .member {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    row-gap: 40px;
+    justify-content: center;
+    .member-card {
+      display: flex;
+      justify-content: center;
+      .member-about-img {
+        border-radius: 50%;
+        width: 200px;
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.3s;
+          border: 5px solid var(--color-primary);
+        }
+      }
+    }
+  }
 }
