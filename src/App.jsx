@@ -7,7 +7,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import MemberPage from "./mariposa/AboutPage/MemberPage/MemberPage";
 import Loader from "./component/Loader/Loader";
-
+import Booking from "./mariposa/Booking/ฺBooking";
+import ConferenceRoom  from "./mariposa/ConferenceRoom/ConferenceRoom";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,14 @@ const router = createBrowserRouter([
   {
     path: "about/member",
     element: <MemberPage />,
+  },
+  {
+    path: "/booking",
+    element: <Booking />,
+  },
+  {
+    path: "/ConferenceRoom",
+    element: <ConferenceRoom />,
   },
 ]);
 

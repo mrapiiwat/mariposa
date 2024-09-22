@@ -1,0 +1,76 @@
+@import "../../component/color.css";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.cfr{
+    background-color: whitesmoke;
+    font-family: "IBM Plex Sans Thai",sans-serif;
+    height: calc(100vh-90px);
+    .conferenceheader{
+        position: relative;
+        height: 300px;
+        .conferencepic{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center -750px ;
+        }
+        .blurconferencepic{
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.358);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            z-index: 1;
+        }
+        .conferencename{
+            position: absolute;
+            font-weight: 900;
+            font-size: 3rem;
+            color: white;
+            top: 40%;
+            z-index: 10;
+            left: 45%;
+            
+        }
+    }
+    .conference-main-content{
+        text-align: center;
+        margin-top: 30px;
+        .conferencedate{
+            background-color: var(--color-primary);
+            width: 400px;
+            height: 50px;
+            font-size: 2rem;
+            font-weight: 600;
+            color: white;
+            margin: 0 auto;
+        }
+        .conference-rules-con{
+            margin-top: 35px;
+            .rules_title{
+                font-size: 2rem;
+                color: var(--color-secondary);
+            }
+            .conference-rules{
+                width: 750px;
+                margin: 15px auto 0;
+                text-align: start;
+                .rules_1,
+                .rules_2,
+                .rules_3{
+                    font-size: 1.5rem;
+                    color: var(--color-secondary);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
