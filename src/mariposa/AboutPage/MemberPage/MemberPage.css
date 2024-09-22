@@ -27,9 +27,9 @@
 
 .member-detail-con {
   position: relative;
+  min-width: 600px;
   .main-name {
     font-size: 5rem;
-    max-width: 530px;
     font-weight: 900;
     color: var(--color-primary);
     text-align: end;
@@ -42,7 +42,6 @@
   }
   .main-info-duty {
     position: absolute;
-    max-width: 600px;
     text-align: end;
     top: 320px;
     font-size: 1.2rem;

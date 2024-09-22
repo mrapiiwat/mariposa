@@ -1,12 +1,15 @@
 import "./NavLogin.css";
-import { Link } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom"; // เพิ่ม useParams และ useNavigate
 import userPic from "../../assets/user.png";
 import mainlogo from "../../assets/libarylogo.png";
 import { MdOutlineExpandMore } from "react-icons/md";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Loader from "../Loader/Loader";
+import { useTranslation } from "react-i18next";
 
 const NavLogin = () => {
+  const { lang } = useParams(); // ดึงค่าภาษาออกจาก URL
+  const { i18n } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState([
     {
@@ -14,9 +17,14 @@ const NavLogin = () => {
       img: userPic,
     },
   ]);
+  const navigate = useNavigate(); // สร้าง navigate สำหรับการนำทาง
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng); // เปลี่ยนภาษาโดยใช้ฟังก์ชัน changeLanguage
+    navigate(`/${lng}${window.location.pathname.slice(3)}`); // เปลี่ยนภาษาที่ path เดิม
+  };
 
   return (
-    
     <div className="nav-log-con">
       {loading ? (
         <Loader loading={loading} />
@@ -38,30 +46,30 @@ const NavLogin = () => {
               </li>
             </ul>
             <div className="lang-con">
-              <Link
+              <a
                 onClick={() => {
                   setLoading(true);
                   setTimeout(() => {
+                    changeLanguage("th");
                     setLoading(false);
-                  }, 1500);
+                  }, 1000);
                 }}
                 className="lang-a"
-                to=""
               >
                 ไทย
-              </Link>
-              <Link
+              </a>
+              <a
                 onClick={() => {
                   setLoading(true);
                   setTimeout(() => {
+                    changeLanguage("en");
                     setLoading(false);
-                  }, 1500);
+                  }, 1000);
                 }}
                 className="lang-a"
-                to=""
               >
                 ENG
-              </Link>
+              </a>
               <span className="just-span">|</span>
             </div>
           </div>

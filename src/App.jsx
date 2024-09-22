@@ -7,6 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
   useParams,
+  Navigate,
 } from "react-router-dom";
 import GameRoom from "./mariposa/GameRoom/GameRoom";
 import { useState, useEffect } from "react";
@@ -27,7 +28,11 @@ const LanguageWrapper = ({ children }) => {
 
 const router = createBrowserRouter([
   {
-    path: "/:lang",
+    path: "/",
+    element: <Navigate to="/th/home" replace />,
+  },
+  {
+    path: "/:lang/home",
     element: (
       <LanguageWrapper>
         <HomePage />
@@ -60,7 +65,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/:lang/about/member",
-    element: <MemberPage />,
+    element: (
+      <LanguageWrapper>
+        <MemberPage />
+      </LanguageWrapper>
+    ),
   },
 ]);
 

@@ -1,6 +1,6 @@
 import Nav from "../../../component/Nav/Nav";
 import "./MemberPage.css";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const MemberPage = () => {
   const location = useLocation();
@@ -18,7 +18,7 @@ const MemberPage = () => {
             />
           </div>
           <div className="member-detail-con">
-            <h1 className="main-name">{member.fullName}</h1>
+            <h1 className="main-name">{member.Name}<br />{member.LastName}</h1>
             <h5 className="main-info-name">คณะผู้จัดทํา {member.fullName}</h5>
             <p className="main-info-duty">
               <strong>มีหน้าที่ :</strong> {member.duty}
