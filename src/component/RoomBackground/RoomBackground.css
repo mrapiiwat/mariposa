@@ -1,0 +1,130 @@
+@import "../../component/color.css";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.room-background-con {
+  height: calc(auto - 90px);
+  background-color: whitesmoke;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+}
+
+.room-background-img-con {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  .room-background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center -750px;
+  }
+  .blur-roombackground {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+  }
+}
+
+.room-background-text-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  .room-background-text {
+    font-size: 3rem;
+    color: white;
+    z-index: 1;
+  }
+}
+
+.room-date-con {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  .room-date-now {
+    text-align: center;
+    background-color: var(--color-primary);
+    width: 350px;
+    color: white;
+  }
+}
+
+.rules-con {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  color: var(--color-secondary);
+  .rules-title {
+    font-size: 1.7rem;
+    font-weight: 900;
+  }
+  .rules-1-3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+.roombackground-emty {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .roomback-open {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+  }
+  .empy-box-room-con {
+    width: 100%;
+    padding-left: 300px;
+    .empy-box-room {
+      margin-top: 10px;
+      width: 100%;
+      height: 35px;
+      border: 5px solid var(--color-secondary);
+    }
+  }
+}
+
+.roomback-time {
+  margin-top: 15px;
+  padding-left: 300px;
+  display: grid;
+  grid-template-columns: repeat(19, 1fr);
+  .room-time-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    border: 1px solid black;
+    font-weight: 500;
+    background-color: var(--color-tertiary);
+    position: relative;
+    .front-time {
+      position: absolute;
+      top: -3px;
+      font-weight: 500;
+    }
+    .end-time {
+      position: absolute;
+      bottom: -6px;
+      font-weight: 500;
+    }
+  }
+}

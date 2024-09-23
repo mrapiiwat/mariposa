@@ -3,6 +3,7 @@ import "./GameRoom.css";
 import GameRoomImg from "../../assets/gameroom.jpg";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import RoomBackground from "../../component/RoomBackground/RoomBackground";
 
 const GameRoom = () => {
   const [date, setDate] = useState("");
