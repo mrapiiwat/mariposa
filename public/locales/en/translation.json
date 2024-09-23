@@ -9,5 +9,13 @@
   "aboutpage-text-2": "CE 385 Application Programming Interface Design course.",
   "aboutpage-text-3": "The Project was created by the project team, third-year students of the Computer Engineering",
   "aboutpage-text-4": "College of Engineering and Technology, Dhurakij Pandit University",
-  "aboutpage-production-team": "Production Team"
+  "aboutpage-production-team": "Production Team",
+
+  "gameroom-title": "Game Room",
+  "gameroom-title-1": "Term of Service",
+  "gameroom-rules-1": " Number of users must not less than 3 people.",
+  "gameroom-rules-2": " The room can be used for 2 hours at a time. If you are more than 15 minutes late, your reservation will be considered void.",
+  "gameroom-rules-3": " Please check in at the counter when it is time to use the service and contact the counter again when you finish.",
+  "gameroom-opening":"Opening Hours: Monday - Friday 8:30 am - 6:00 pm / Weekends 9:00 am - 6:00 pm"
+  
 }
