@@ -1,8 +1,10 @@
 import "./RoomBackground.css";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-const RoomBackground = ({imgOfroom,nameofroom}) => {
+const RoomBackground = ({ imgOfroom, nameofroom }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
+  const { t } = useTranslation();
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -19,7 +21,11 @@ const RoomBackground = ({imgOfroom,nameofroom}) => {
   return (
     <div className="room-background-con">
       <div className="room-background-img-con">
-        <img className="room-background-img" src={imgOfroom} alt="room background" />
+        <img
+          className="room-background-img"
+          src={imgOfroom}
+          alt="room background"
+        />
         <div className="room-background-text-con">
           <h1 className="room-background-text">{nameofroom}</h1>
         </div>
@@ -33,43 +39,115 @@ const RoomBackground = ({imgOfroom,nameofroom}) => {
         </div>
       </div>
       <div className="rules-con">
-        <div className="rules-title">
-          ข้อปฎิบัติในการใช้งาน
-        </div>
-          <ol className="rules-1-3">
-            <li className="rules-1"> จํานวนผู้ใช้บริการ ไม่น้อยกว่า 3 คน</li>
-            <li className="rules-1"> ใช้บริการได้ครั้งละ 2 ชั่วโมง มาช้ากว่า 15 นาที ถือว่าท่านสละสิทธ์</li>
-            <li className="rules-1"> ติดต่อที่เคาน์เตอร์ เมื่อถึงเวลาใช้บริการ เเล้วใช้บริการเสร็จเเล้ว</li>
-          </ol>
+        <div className="rules-title">{t("gameroom-title-1")}</div>
+        <ol className="rules-1-3">
+          <li className="rules-1"> {t("gameroom-rules-1")}</li>
+          <li className="rules-1"> {t("gameroom-rules-2")} </li>
+          <li className="rules-1"> {t("gameroom-rules-3")}</li>
+        </ol>
       </div>
       <div className="roombackground-emty">
-        <div className="roomback-open">
-          เวลาทำการ: วันจันทร์-วันศุกร์  08.00 -18.00 น. / วันเสาร์-วันอาทิตย์ 8:30-18.00น
-        </div>
+        <div className="roomback-open">{t("gameroom-opening")}</div>
         <div className="empy-box-room-con">
           <div className="empy-box-room"></div>
         </div>
       </div>
       <div className="roomback-time">
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
-        <div className="room-time-back"><span className="front-time">8:00</span><span>-</span><span className="end-time">8:30</span></div>
+        <div className="room-time-back">
+          <span className="front-time">8:00</span>
+          <span>-</span>
+          <span className="end-time">8:30</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">8:30</span>
+          <span>-</span>
+          <span className="end-time">9:00</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">9:00</span>
+          <span>-</span>
+          <span className="end-time">9:30</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">9:30</span>
+          <span>-</span>
+          <span className="end-time">10:00</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">10:00</span>
+          <span>-</span>
+          <span className="end-time">10:30</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">10:30</span>
+          <span>-</span>
+          <span className="end-time">11:00</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">11:00</span>
+          <span>-</span>
+          <span className="end-time">11:30</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">11:30</span>
+          <span>-</span>
+          <span className="end-time">12:00</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">12:00</span>
+          <span>-</span>
+          <span className="end-time">12:30</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">12:30</span>
+          <span>-</span>
+          <span className="end-time">13:00</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">13:00</span>
+          <span>-</span>
+          <span className="end-time">13:30</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">13:30</span>
+          <span>-</span>
+          <span className="end-time">14:00</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">14:00</span>
+          <span>-</span>
+          <span className="end-time">14:30</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">14:30</span>
+          <span>-</span>
+          <span className="end-time">15:00</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">15:00</span>
+          <span>-</span>
+          <span className="end-time">15:30</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">15:30</span>
+          <span>-</span>
+          <span className="end-time">16:00</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">16:00</span>
+          <span>-</span>
+          <span className="end-time">16:30</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">16:30</span>
+          <span>-</span>
+          <span className="end-time">17:00</span>
+        </div>
+        <div className="room-time-back">
+          <span className="front-time">17:30</span>
+          <span>-</span>
+          <span className="end-time">18:00</span>
+        </div>
       </div>
     </div>
   );
