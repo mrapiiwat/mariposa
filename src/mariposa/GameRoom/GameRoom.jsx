@@ -6,24 +6,13 @@ import { useTranslation } from "react-i18next";
 import RoomBackground from "../../component/RoomBackground/RoomBackground";
 
 const GameRoom = () => {
-  const [date, setDate] = useState("");
-  const { t } = useTranslation();
-  useEffect(() => {
-    const updateDate = () => {
-      const now = new Date();
-      const options = { year: "numeric", month: "long", day: "numeric" };
-      const dateString = now.toLocaleDateString("th-Th", options);
-      setDate(dateString);
-    };
-    updateDate();
-    const intervalId = setInterval(updateDate, 1000 * 60 * 60);
-    return () => clearInterval(intervalId);
-  }, []);
+  const {t} = useTranslation();
   return (
+
     <div className="game-con">
       <NavLogin />
-      
+      <RoomBackground imgOfroom={GameRoomImg} nameofroom={t('gameroom-title')}/>
     </div>
-  );
+);
 };
 export default GameRoom;
