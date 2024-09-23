@@ -8,6 +8,7 @@ const ServicePage = () => {
       <Nav />
       <div className="servicepage">
 
+
 {/* Service Detail. Tell more about service and fees in libary. */}
         <div className="service_detail">
           <div className="service_detail_left">
@@ -46,23 +47,28 @@ const ServicePage = () => {
           </div>
         </div>
 
+
 {/* Floorplan. Show what libary looks like */}
         <div className="service_floorplan">
-          <div className="floorplan_title">มากกว่าห้องสมุด... คือพื้นที่ Co-Working Space สุดชิค</div>
-          <div className="floorplan_detail">
-            เน้นการบริการในรูปแบบใหม่ที่เป็นมากกว่าห้องสมุด
-            <ul>
-              <li>ชั้น 1: ห้องสมุดหลักบรรยากาศเงียบสงบ </li>
-              <li>ชั้น 2: พื้นที่ Co-working Space </li>
-              <li>ชั้น 3: ห้องประชุมขนาดต่างๆ</li>
-              <li>ชั้น 4: โรงภาพยนตร์ขนาดเล็ก ห้องเกม และพื้นที่พักผ่อน (สงวนสิทธิ์แก่นักศึกษาเท่านั้น)</li>
-            </ul>
+          <div className="service_floorplan_left">
+            <div className="floorplan_title">มากกว่าห้องสมุด... คือพื้นที่ <br></br>Co-Working Space สุดชิค</div>
+            <div className="floorplan_detail">
+              เน้นการบริการในรูปแบบใหม่ที่เป็นมากกว่าห้องสมุด
+              <ul>
+                <li>ชั้น 1: ห้องสมุดหลักบรรยากาศเงียบสงบ </li>
+                <li>ชั้น 2: พื้นที่ Co-working Space </li>
+                <li>ชั้น 3: ห้องประชุมขนาดต่างๆ</li>
+                <li>ชั้น 4: โรงภาพยนตร์ขนาดเล็ก ห้องเกม และพื้นที่พักผ่อน (สงวนสิทธิ์แก่นักศึกษาเท่านั้น)</li>
+              </ul>
+            </div>
+            <div className="floorplan_golink">
+                <Link>คลิกเพื่อดูรายละเอียดแผนผังหอสมุด</Link>
+            </div>
           </div>
-          <div className="floorplan_golink">
-              <Link>คลิกเพื่อดูรายละเอียดแผนผังหอสมุด</Link>
-          </div>
-          <div className="floorplan_img">
-            <img src="src\assets\libarybuilding.jpg" alt="libary building" />
+          <div className="service_floorplan_right">
+            <div className="floorplan_img">
+              <img src="src\assets\libarybuilding.jpg" alt="libary building" />
+            </div>
           </div>
         </div>
 

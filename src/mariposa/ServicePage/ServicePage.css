@@ -37,6 +37,10 @@
     font-weight: 700;
     margin-bottom: 5px;
   }
+  .left_golink {
+    position: absolute;
+    bottom: 20px;
+  }
 }
 
 .service_detail_right {
@@ -55,19 +59,43 @@
   align-items: center;
   height: 100%;
 }
-.left_golink {
-  position: absolute;
-  bottom: 20px;
-}
 
-/* Floorplan CSS */
+
+/* Service floorplan CSS */
 .service_floorplan {
   height: 90vh;
   display: flex;
   align-items: center;
   padding: 30px;
-  background-color: #e852342c;
+  background-color: #f2eee9;
   position: relative;
   border-radius: 35px;
   font-size: 1.8rem;
+  margin-top: 80px;
+}
+
+.service_floorplan_left {
+  width: 50%;
+  padding: 30px ;
+  color: var(--color-secondary);
+  .floorplan_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .floorplan_golink {
+    position: absolute;
+    bottom: 20px;
+  }
+}
+
+.service_floorplan_right {
+  width: 50%;
+  padding: 30px;
+  .floorplan_img img {
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 35px;
+  }
 }
