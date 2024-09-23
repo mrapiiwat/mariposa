@@ -1,7 +1,9 @@
 import Nav from "../../component/Nav/Nav";
 import "./HomePage.css";
+import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
+  const {t} = useTranslation();
   return (
     <div className="home-page-con">
       <Nav />
@@ -9,11 +11,11 @@ const HomePage = () => {
         <div className="bulr-back"></div>
         <div className="home-content">
           <h1 className="home-h1">
-            หอสมุด
+            {t('Library')}
             <br />
-            มหาวิทยาลัยเมริโพซ่า
+            {t('mariposaU')}
           </h1>
-          <button className="home-login-btn">เข้าสู่ระบบ</button>
+          <button className="home-login-btn">{t('Log-in')}</button>
         </div>
       </main>
     </div>

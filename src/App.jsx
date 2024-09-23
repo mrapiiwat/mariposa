@@ -1,7 +1,14 @@
 import HomePage from "./mariposa/HomePage/HomePage";
 import AboutPage from "./mariposa/AboutPage/AboutPage";
 import ServicePage from "./mariposa/ServicePage/ServicePage";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import "./i18n.js";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useParams,
+  Navigate,
+} from "react-router-dom";
 import GameRoom from "./mariposa/GameRoom/GameRoom";
 import { useState, useEffect } from "react";
 import "./App.css";
@@ -9,26 +16,62 @@ import MemberPage from "./mariposa/AboutPage/MemberPage/MemberPage";
 import Loader from "./component/Loader/Loader";
 import Booking from "./mariposa/Booking/ฺBooking";
 import ConferenceRoom  from "./mariposa/ConferenceRoom/ConferenceRoom";
+
+const LanguageWrapper = ({ children }) => {
+  const { lang } = useParams(); // ดึงภาษาออกจาก URL path
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(lang); // เปลี่ยนภาษาตาม URL path
+  }, [lang, i18n]);
+
+  return children;
+};
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <Navigate to="/th/home" replace />,
   },
   {
-    path: "/about",
-    element: <AboutPage />,
+    path: "/:lang/home",
+    element: (
+      <LanguageWrapper>
+        <HomePage />
+      </LanguageWrapper>
+    ),
   },
   {
-    path: "/service",
-    element: <ServicePage />,
+    path: "/:lang/about",
+    element: (
+      <LanguageWrapper>
+        <AboutPage />
+      </LanguageWrapper>
+    ),
   },
   {
-    path: "/gameroom",
-    element: <GameRoom />,
+    path: "/:lang/service",
+    element: (
+      <LanguageWrapper>
+        <ServicePage />
+      </LanguageWrapper>
+    ),
   },
   {
-    path: "about/member",
-    element: <MemberPage />,
+    path: "/:lang/gameroom",
+    element: (
+      <LanguageWrapper>
+        <GameRoom />
+      </LanguageWrapper>
+    ),
+  },
+  {
+    path: "/:lang/about/member",
+    element: (
+      <LanguageWrapper>
+        <MemberPage />
+      </LanguageWrapper>
+    ),
   },
   {
     path: "/booking",

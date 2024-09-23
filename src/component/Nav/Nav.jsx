@@ -1,10 +1,24 @@
 import "./nav.css";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom"; // เพิ่ม useNavigate
+import { useState, useEffect } from "react";
 import mainlogo from "../../assets/libarylogo.png";
+import { useTranslation } from "react-i18next";
+import Loader from "../Loader/Loader";
 
 const Nav = () => {
+  const { lang } = useParams(); // ดึงค่าภาษาออกจาก URL
+  const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate(); // สร้าง navigate สำหรับการนำทาง
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng); // เปลี่ยนภาษาโดยใช้ฟังก์ชัน changeLanguage
+    navigate(`/${lng}${window.location.pathname.slice(3)}`); // เปลี่ยนภาษาที่ path เดิม
+  };
+
+  useEffect(() => {
+    i18n.changeLanguage(lang); // เปลี่ยนภาษาตาม URL path
+  }, [lang, i18n]);
 
   return (
     <div className="nav-con">
@@ -15,12 +29,12 @@ const Nav = () => {
           <div className="logo-con">
             <Link
               onClick={() => {
-                loading(true);
+                setLoading(true);
                 setTimeout(() => {
                   setLoading(false);
                 }, 1000);
               }}
-              to="/"
+              to={`/${lang}/home`} // แก้ให้ลิงก์นำไปยัง path ที่มีภาษารวมอยู่
             >
               <img className="main-logo" src={mainlogo} alt="main logo" />
             </Link>
@@ -28,41 +42,41 @@ const Nav = () => {
           <div className="menu-con">
             <ul className="ul-nav">
               <li className="li-nav">
-                <Link className="menu-a" to="/about">
-                  เกี่ยวกับเรา
+                <Link className="menu-a" to={`/${lang}/about`}>
+                  {t("About")}
                 </Link>
               </li>
               <li className="li-nav">
-                <Link className="menu-a" to="/service">
-                  บริการ
+                <Link className="menu-a" to={`/${lang}/service`}>
+                  {t("Service")}
                 </Link>
               </li>
             </ul>
             <div className="lang-con">
-              <Link
+              <a
                 onClick={() => {
-                  loading(true);
+                  setLoading(true);
                   setTimeout(() => {
+                    changeLanguage("th");
                     setLoading(false);
-                  }, 1500);
+                  }, 1000);
                 }}
                 className="lang-a"
-                to=""
               >
                 ไทย
-              </Link>
-              <Link
+              </a>
+              <a
                 onClick={() => {
-                  loading(true);
+                  setLoading(true);
                   setTimeout(() => {
+                    changeLanguage("en");
                     setLoading(false);
-                  }, 1500);
+                  }, 1000);
                 }}
                 className="lang-a"
-                to=""
               >
                 ENG
-              </Link>
+              </a>
               <span className="just-span">|</span>
             </div>
           </div>
