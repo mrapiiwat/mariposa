@@ -2,16 +2,14 @@ import React from "react";
 import NavLogin from "../../component/Nav/NavLogin";
 import "./GameRoom.css";
 import { useTranslation } from "react-i18next";
+import RoomBackground from "../../component/RoomBackground/RoomBackground";
 
 const GameRoom = () => {
   const {t} = useTranslation();
   return (
     <div className="game-con">
       <NavLogin />
-      <section className="game-room-con">
-        <h1>Cream</h1>
-        <p>{t('About')}</p>
-      </section>
+      <RoomBackground />
     </div>
   );
 };
