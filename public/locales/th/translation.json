@@ -19,5 +19,16 @@
   "gameroom-opening":" เวลาทำการ: วันจันทร์-วันศุกร์  08.00 -18.00 น. / วันเสาร์-วันอาทิตย์ 8:30-18.00น",
 
   "conroom-title": "ห้องประชุม",
-  "cinema-title": "ห้องโรงภาพยนตร์"
+  "cinema-title": "ห้องโรงภาพยนตร์",
+
+  "gameroom-booking-detail1":"ห้อง 1 (6คน)",
+  "gameroom-booking-detail2":"ห้อง 2 (6คน)",
+  "gameroom-booking-detail3":"ห้อง 3 (6คน)",
+  "gameroom-booking-detail4":"ห้อง 4 (12คน)",
+  "gameroom-booking-detail5":"ห้อง 5 (12คน)",
+  "gameroom-booking-detail6":"ห้อง 6 (12คน)",
+  "gameroom-booking-detail7":"ห้อง 7 (22คน)",
+
+
+  "gameroom-btn":"จอง"
 }
