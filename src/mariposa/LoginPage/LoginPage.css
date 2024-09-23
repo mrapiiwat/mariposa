@@ -1,0 +1,25 @@
+@import "../../component/color.css";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Loginpage {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  height: calc(100vh - 90px);
+  background-image: url("../../assets/libarybackground.jpg");
+  background-size: cover;
+  background-position: calc(100px - 30px) 70%;
+  filter: brightness(0.3);
+  position: relative;
+}
+.Login-page-input {
+   position: absolute;
+   z-index: 10;
+   background-color: var(--color-tertiary);
+   width: 100%;
+   padding: 10px; 
+}
