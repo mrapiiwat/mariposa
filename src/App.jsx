@@ -14,8 +14,6 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import MemberPage from "./mariposa/AboutPage/MemberPage/MemberPage";
 import Loader from "./component/Loader/Loader";
-import Booking from "./mariposa/Booking/ฺBooking";
-import ConferenceRoom from "./mariposa/ConferenceRoom/ConferenceRoom";
 
 const LanguageWrapper = ({ children }) => {
   const { lang } = useParams(); // ดึงภาษาออกจาก URL path
@@ -70,22 +68,6 @@ const router = createBrowserRouter([
     element: (
       <LanguageWrapper>
         <MemberPage />
-      </LanguageWrapper>
-    ),
-  },
-  {
-    path: "/:lang/booking",
-    element: (
-      <LanguageWrapper>
-        <Booking />
-      </LanguageWrapper>
-    ),
-  },
-  {
-    path: "/:lang/conferenceroom",
-    element: (
-      <LanguageWrapper>
-        <ConferenceRoom />
       </LanguageWrapper>
     ),
   },
