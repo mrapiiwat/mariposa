@@ -2,7 +2,7 @@ import NavLogin from "../../component/Nav/NavLogin";
 import "./SelectRoom.css";
 import { useTranslation } from "react-i18next";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const SelectRoom = () => {
   const { lang } = useParams(); // ดึงค่าภาษาออกจาก URL

@@ -82,8 +82,8 @@
   align-items: center;
   flex-direction: column;
   .log-btn {
-    padding: 15px 30px;
-    width: 250px;
+    padding: 10px 30px;
+    width: 200px;
     font-size: 1.2rem;
     font-weight: 900;
     background-color: var(--color-primary);
@@ -92,12 +92,19 @@
     border-radius: 30px;
     margin-bottom: 20px;
     font-family: "IBM Plex Sans Thai", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    &:hover {
+      background-color: #d84c2f;
+    }
+    &:active {
+      background-color: #bc351a;
+    }
   }
   .nolog-btn {
     font-size: 1.2rem;
     color: var(--color-secondary);
     font-weight: 500;
-
   }
 }
 

@@ -49,6 +49,7 @@
       padding: 5px 100px;
       border-radius: 50px;
       margin-top: 40px;
+      text-decoration: none;
       &:hover {
         background-color: #d84c2f;
       }
