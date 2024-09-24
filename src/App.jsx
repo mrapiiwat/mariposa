@@ -71,6 +71,7 @@ const router = createBrowserRouter([
       </LanguageWrapper>
     ),
   },
+  
 ]);
 
 function App() {
