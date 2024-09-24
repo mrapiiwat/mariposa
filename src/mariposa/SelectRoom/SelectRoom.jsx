@@ -23,7 +23,7 @@ const SelectRoom = () => {
       <NavLogin />
       <div className="selectroom">
         <div className="select-room">
-          <Link to={`/${lang}/...`}>
+          <Link to={`/${lang}/conference`}>
             <div className="conroom">
               <div className="blurconroom"></div>
               <h1 className="conroomtext">{t("conroom-title")}</h1>
