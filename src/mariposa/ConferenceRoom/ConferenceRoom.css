@@ -1,0 +1,88 @@
+@import "../../component/color.css";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.t1  {
+    font-family: "IBM Plex Sans Thai",sans-saerif;
+    padding: 20px 0 0 30px;
+    background-color: whitesmoke;
+    height: 70vh;
+    position: relative;
+    display: flex;
+
+    .conference-booking-detail-con{
+        .conference-booking-detail{
+            background-color: var(--color-primary);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            width: 260px;
+            padding: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+    }
+    .conference-booking-table-detail{
+        display: grid;
+        grid-template-columns: repeat(19,1fr);
+        grid-template-rows: repeat(7,49px);
+        row-gap: 11px;
+        margin-left: 10px;
+        width: 100%;
+
+        .conference-checkbox{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .conference-label{
+                border: none;
+                .conference-select{
+                    width: 40px;
+                    height: 40px;
+                    margin-top: 5px;
+                    border: 10px solid red;
+
+
+                }
+            }
+        }
+
+        .conference-btn{
+            font-family: "IBM Plex Sans Thai",san-serif;
+            padding: 10px 60px;
+            position: absolute;
+            bottom: -5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-items: center;
+            margin: 20px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            right: 40%;
+            background-color: #e85234;
+            color: white;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.9;
+            }
+            &:active{
+                opacity: 1;
+            }
+        }
+    }
+
+
+
+
+}
+
+

@@ -15,7 +15,7 @@ import "./App.css";
 import MemberPage from "./mariposa/AboutPage/MemberPage/MemberPage";
 import Loader from "./component/Loader/Loader";
 import SelectRoom from "./mariposa/SelectRoom/SelectRoom.jsx";
-
+import ConferenceRoom from './mariposa/ConferenceRoom/ConferenceRoom.jsx'
 const LanguageWrapper = ({ children }) => {
   const { lang } = useParams(); // ดึงภาษาออกจาก URL path
   const { i18n } = useTranslation();
@@ -76,10 +76,19 @@ const router = createBrowserRouter([
     path: "/:lang/room",
     element: (
       <LanguageWrapper>
-        <SelectRoom /> 
+        <SelectRoom />
       </LanguageWrapper>
     ),
   },
+  {
+    path: "/:lang/conference",
+    element: (
+      <LanguageWrapper>
+        <ConferenceRoom />
+      </LanguageWrapper>
+    ),
+  },
+  
 ]);
 
 function App() {

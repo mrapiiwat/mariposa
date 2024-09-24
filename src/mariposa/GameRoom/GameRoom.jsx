@@ -1,3 +1,4 @@
+import React from "react";
 import NavLogin from "../../component/Nav/NavLogin";
 import "./GameRoom.css";
 import GameRoomImg from "../../assets/gameroom.jpg";
