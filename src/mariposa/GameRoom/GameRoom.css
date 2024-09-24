@@ -53,14 +53,14 @@
     }
     .gameroom-btn{
       font-family: "IBM Plex Sans Thai", sans-serif;
-      padding: 10px 60px;
+      padding: 7px 50px;
       position: absolute;
       bottom: -5px;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 20px 0;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       font-weight: bold;
       border: none;
       border-radius: 30px;

@@ -8,6 +8,85 @@ import RoomBackground from "../../component/RoomBackground/RoomBackground";
 const GameRoom = () => {
   const {t} = useTranslation();
   const [gamroomCheckbox,setGamroomCheckbox] = useState(Array(133).fill(false))
+
+  const ROW_SIZE = 19; 
+
+  
+  const timeSlots = [
+    "8:00 - 8:30", "8:30 - 9:00", "9:00 - 9:30", "9:30 - 10:00", "10:00 - 10:30","10.30 - 11.00","11.00 - 11.30", "11.30 - 12.00","12.00 - 12.30", "12.30 - 13.00","13.00 - 13.30","13.30 - 14.00","14.00 - 14.30","14.30 - 15.00","15.00 - 15.30","15.30 - 16.00", "16.00 - 16.30","16.30 - 17.00","17.00 - 17.30","17.30 - 18.00"
+    
+  ];
+
+  
+  const handleCheckboxChange = (index) => {
+    const updatedCheckboxes = [...gamroomCheckbox];
+
+    
+    const currentRow = Math.floor(index / ROW_SIZE);
+
+    
+    const isDifferentRow = updatedCheckboxes.some(
+      (isChecked, i) => isChecked && Math.floor(i / ROW_SIZE) !== currentRow
+    );
+
+   
+    if (isDifferentRow) {
+      updatedCheckboxes.fill(false);
+    }
+
+    
+    const selectedCount = updatedCheckboxes.filter(Boolean).length;
+
+    
+    const checkAdjacent = (arr, rowStart, rowEnd) => {
+      let maxStreak = 0;
+      let currentStreak = 0;
+
+      for (let i = rowStart; i <= rowEnd; i++) {
+        if (arr[i]) {
+          currentStreak++;
+        } else {
+          maxStreak = Math.max(maxStreak, currentStreak);
+          currentStreak = 0;
+        }
+      }
+      maxStreak = Math.max(maxStreak, currentStreak); 
+      return maxStreak;
+    };
+
+    
+    if (!updatedCheckboxes[index] && selectedCount >= 4) {
+      return;
+    }
+
+    
+    updatedCheckboxes[index] = !updatedCheckboxes[index];
+    const rowStart = currentRow * ROW_SIZE;
+    const rowEnd = rowStart + ROW_SIZE - 1;
+    const adjacentCount = checkAdjacent(updatedCheckboxes, rowStart, rowEnd);
+
+    if (adjacentCount > 4) {
+      return;
+    }
+
+    setGamroomCheckbox(updatedCheckboxes);  
+  };
+
+  
+  const handleButtonClick = () => {
+    const selectedSlots = gamroomCheckbox
+      .map((isChecked, index) => {
+        if (isChecked) {
+          const rowNumber = Math.floor(index / ROW_SIZE) + 1;
+          const timeSlot = timeSlots[index % ROW_SIZE];
+          return `Row ${rowNumber}, Time: ${timeSlot}`;
+        }
+        return null;
+      })
+      .filter(Boolean); 
+
+    console.log("Selected slots:", selectedSlots);
+  };
   return (
 
     <div className="game-con">
@@ -27,13 +106,13 @@ const GameRoom = () => {
           
         <div className="gameroom-booking-table-detail">
           {gamroomCheckbox.map((isChecked,index)=>(
-            <div className="gameroom-checkbox">
-              <label className="gameroom-lable" key={index}><input className="gameroom-select" type="checkbox" checked = {isChecked} /></label>
+            <div className="gameroom-checkbox" key={index}>
+              <label className="gameroom-lable" key={index}><input className="gameroom-select" type="checkbox" checked = {isChecked}  onChange={() => handleCheckboxChange(index)}  /></label>
 
             </div>
 
           ))}
-          <button className="gameroom-btn">{t('gameroom-btn')}</button>
+          <button onClick={handleButtonClick} className="gameroom-btn">{t('gameroom-btn')}</button>
         </div>
 
       </div>
