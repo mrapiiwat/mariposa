@@ -140,23 +140,26 @@ const GameRoom = () => {
             {t("gameroom-booking-detail7")}
           </div>
         </div>
-
-        <div className="gameroom-booking-table-detail">
-          {gamroomCheckbox.map((isChecked, index) => (
-            <div key={index} className="gameroom-checkbox">
-              <label className="gameroom-lable" key={index}>
-                <input
-                  className="gameroom-select"
-                  type="checkbox"
-                  checked={isChecked}
-                  onChange={() => handleCheckboxChange(index)}
-                />
-              </label>
-            </div>
-          ))}
-          <button onClick={handleButtonClick} className="gameroom-btn">
-            {t("gameroom-btn")}
-          </button>
+        <div className="gameroom-booking-table-detail-con">
+          <div className="gameroom-booking-table-detail">
+            {gamroomCheckbox.map((isChecked, index) => (
+              <div key={index} className="gameroom-checkbox">
+                <label className="gameroom-lable" key={index}>
+                  <input
+                    className="gameroom-select"
+                    type="checkbox"
+                    checked={isChecked}
+                    onChange={() => handleCheckboxChange(index)}
+                  />
+                </label>
+              </div>
+            ))}
+          </div>
+          <div className="gameroom-btn-con">
+            <button onClick={handleButtonClick} className="gameroom-btn">
+              {t("gameroom-btn")}
+            </button>
+          </div>
         </div>
       </div>
     </div>

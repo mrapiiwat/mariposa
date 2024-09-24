@@ -100,38 +100,51 @@ const ConferenceRoom = () => {
   return (
     <div className="confer-room-con">
       <NavLogin />
-      <RoomBackground
-        imgOfroom={backgroung}
-        nameofroom={t("conference-title")} // ดึงข้อความแปล
-      />
-
+      <RoomBackground imgOfroom={backgroung} nameofroom={t("conroom-title")} />
       <div className="t1">
         <div className="conference-booking-detail-con">
-          <div className="conference-booking-detail">ห้อง 1(6คน)</div>
-          <div className="conference-booking-detail">ห้อง 2(6คน)</div>
-          <div className="conference-booking-detail">ห้อง 3(6คน)</div>
-          <div className="conference-booking-detail">ห้อง 4(12คน)</div>
-          <div className="conference-booking-detail">ห้อง 5(12คน)</div>
-          <div className="conference-booking-detail">ห้อง 6(12คน)</div>
-          <div className="conference-booking-detail">ห้อง 7(22คน)</div>
+          <div className="conference-booking-detail">
+            {t("gameroom-booking-detail1")}
+          </div>
+          <div className="conference-booking-detail">
+            {t("gameroom-booking-detail2")}
+          </div>
+          <div className="conference-booking-detail">
+            {t("gameroom-booking-detail3")}
+          </div>
+          <div className="conference-booking-detail">
+            {t("gameroom-booking-detail4")}
+          </div>
+          <div className="conference-booking-detail">
+            {t("gameroom-booking-detail5")}
+          </div>
+          <div className="conference-booking-detail">
+            {t("gameroom-booking-detail6")}
+          </div>
+          <div className="conference-booking-detail">
+            {t("gameroom-booking-detail7")}
+          </div>
         </div>
-
-        <div className="conference-booking-table-detail">
-          {conferenceCheckbox.map((isChecked, index) => (
-            <div className="conference-checkbox" key={index}>
-              <label className="conference-label" key={index}>
-                <input
-                  className="conference-select"
-                  type="checkbox"
-                  checked={isChecked}
-                  onChange={() => handleCheckboxChange(index)}
-                />
-              </label>
-            </div>
-          ))}
-          <button onClick={handleButtonClick} className="conference-btn">
-            {t("gameroom-btn")}
-          </button>
+        <div className="conroom-booking-table-detail-con">
+          <div className="conference-booking-table-detail">
+            {conferenceCheckbox.map((isChecked, index) => (
+              <div key={index} className="conference-checkbox">
+                <label className="conference-label" key={index}>
+                  <input
+                    className="conference-select"
+                    type="checkbox"
+                    checked={isChecked}
+                    onChange={() => handleCheckboxChange(index)}
+                  />
+                </label>
+              </div>
+            ))}
+          </div>
+          <div className="conroom-btn-con">
+            <button onClick={handleButtonClick} className="conroom-btn">
+              {t("gameroom-btn")}
+            </button>
+          </div>
         </div>
       </div>
     </div>
