@@ -9,5 +9,28 @@
   "aboutpage-text-2": "ของรายวิชา CE 385 การออกแบบสถาปัตยกรรมแอปพลิเคชั่น",
   "aboutpage-text-3": "จัดทําโดยคณะผู้จัดทํา นักศึกษาชั้นปีที่ 3 วิทยาลัยนวัตกรรมด้านเทคโนโลยีและวิศวกรรมศาสตร์",
   "aboutpage-text-4": "สาขาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยธุรกิจบัณฑิตย์",
-  "aboutpage-production-team": "คณะผู้จัดทํา"
+  "aboutpage-production-team": "คณะผู้จัดทํา",
+
+  "gameroom-title": "ห้องเล่นเกมส์",
+  "gameroom-title-1": "ข้อปฏิบัติในการใช้บริการ",
+  "gameroom-rules-1": "จำนวนผู้ใช้บริการ ไม่น้อยกว่า 3 คน",
+  "gameroom-rules-2": "ใช้บริการห้องได้ครั้งละ 2 ชั่วโมง มาช้าเกิน 15 นาทีถือว่าท่านสละสิทธิ์",
+  "gameroom-rules-3": "ติดต่อที่เคาน์เตอร์ เมื่อถึงเวลาใช้บริการและใช้บริการแล้วเสร็จ",
+  "gameroom-opening":" เวลาทำการ: วันจันทร์-วันศุกร์  08.00 -18.00 น. / วันเสาร์-วันอาทิตย์ 8:30-18.00น",
+
+  "conference-title":"ห้องประชุม",
+
+  "conroom-title": "ห้องประชุม",
+  "cinema-title": "ห้องโรงภาพยนตร์",
+
+  "gameroom-booking-detail1":"ห้อง 1 (6คน)",
+  "gameroom-booking-detail2":"ห้อง 2 (6คน)",
+  "gameroom-booking-detail3":"ห้อง 3 (6คน)",
+  "gameroom-booking-detail4":"ห้อง 4 (12คน)",
+  "gameroom-booking-detail5":"ห้อง 5 (12คน)",
+  "gameroom-booking-detail6":"ห้อง 6 (12คน)",
+  "gameroom-booking-detail7":"ห้อง 7 (22คน)",
+
+
+  "gameroom-btn":"จอง"
 }
