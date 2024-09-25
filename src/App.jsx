@@ -18,6 +18,7 @@ import LoginPage from "./mariposa/LoginPage/LoginPage.jsx";
 import SelectRoom from "./mariposa/SelectRoom/SelectRoom.jsx";
 import ConferenceRoom from "./mariposa/ConferenceRoom/ConferenceRoom.jsx";
 import SingUp from "./mariposa/LoginPage/SingUp.jsx";
+import PageNotFound from "./mariposa/404/PageNotFound.jsx";
 const LanguageWrapper = ({ children }) => {
   const { lang } = useParams(); // ดึงภาษาออกจาก URL path
   const { i18n } = useTranslation();
@@ -104,6 +105,12 @@ const router = createBrowserRouter([
       <LanguageWrapper>
         <SingUp />
       </LanguageWrapper>
+    ),
+  },
+  {
+    path: "*",
+    element: (
+      <PageNotFound />
     ),
   },
 ]);

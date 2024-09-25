@@ -1,8 +1,23 @@
 import React from "react";
 import "./SingUp.css";
 import Nav from "../../component/Nav/Nav";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 const SingUp = () => {
+  const { lang } = useParams(); // ดึงค่าภาษาออกจาก URL
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate(); // สร้าง navigate สำหรับการนำทาง
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng); // เปลี่ยนภาษาโดยใช้ฟังก์ชัน changeLanguage
+    navigate(`/${lng}${window.location.pathname.slice(3)}`); // เปลี่ยนภาษาที่ path เดิม
+  };
+
+  useEffect(() => {
+    i18n.changeLanguage(lang); // เปลี่ยนภาษาตาม URL path
+  }, [lang, i18n]);
   return (
     <div className="sing-up-page-con">
       <Nav />
@@ -32,7 +47,7 @@ const SingUp = () => {
             </div>
           </div>
           <div className="sing-up-but">
-            <button className="sing-up-btn">สมัคร</button>
+            <Link to={`/${lang}/login`} className="sing-up-btn">สมัคร</Link>
           </div>
         </div>
       </div>

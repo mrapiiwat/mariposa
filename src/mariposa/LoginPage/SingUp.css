@@ -71,6 +71,11 @@
   font-size: 1.5rem;
   font-weight: 600;
   font-family: "IBM Plex Sans Thai", sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &:hover {
     background-color: #d84c2f;
   }

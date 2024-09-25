@@ -17,15 +17,15 @@ function LoginPage() {
   };
 
   useEffect(() => {
+    i18n.changeLanguage(lang); // เปลี่ยนภาษาตาม URL path
+  }, [lang, i18n]);
+
+  useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 1000);
   }, []);
-
-  useEffect(() => {
-    i18n.changeLanguage(lang); // เปลี่ยนภาษาตาม URL path
-  }, [lang, i18n]);
 
   return (
     <div className="Login-Page-con">
