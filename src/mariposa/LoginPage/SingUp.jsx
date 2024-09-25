@@ -11,6 +11,7 @@ const SingUp = () => {
   const navigate = useNavigate(); // สร้าง navigate สำหรับการนำทาง
 
   const changeLanguage = (lng) => {
+    e.preventDefault();
     i18n.changeLanguage(lng); // เปลี่ยนภาษาโดยใช้ฟังก์ชัน changeLanguage
     navigate(`/${lng}${window.location.pathname.slice(3)}`); // เปลี่ยนภาษาที่ path เดิม
   };
