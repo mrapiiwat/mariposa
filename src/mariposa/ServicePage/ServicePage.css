@@ -12,7 +12,7 @@
   font-family: "IBM Plex Sans Thai", sans-serif;
 }
 .servicepage{
-  height: calc(400vh - 90px);
+  height: calc(220vh - 90px);
   padding: 30px 50px;
   background-color: whitesmoke;
 }

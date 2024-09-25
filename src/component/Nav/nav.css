@@ -64,7 +64,7 @@ nav {
       }
       .just-span {
         position: absolute;
-        left: 45px;
+        left: 20px !important;
         font-size: 2rem;
         color: var(--color-secondary);
       }

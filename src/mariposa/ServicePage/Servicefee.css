@@ -9,20 +9,40 @@
   font-family: "IBM Plex Sans Thai", sans-serif;
 }
 .servicefee{
-  height: calc(auto - 90px);
-  padding: 30px 50px;
+  height: calc(100vh - 90px);
   background-color: whitesmoke;
+  padding: 30px 50px !important;
+}
+
+.servicefee_detail{
   display: flex;
   flex-direction: column;
+  background-color: #e8523428;
+  width: 100%;
+  height: 100%;
   justify-content: start;
-  text-align: center;
 }
-.servicefee_detail {
-  height: 90vh;
+
+.servicefee_title{
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.servicefee_divst{
   display: flex;
-  padding: 30px;
-  background-color: #e852342c;
-  border-radius: 35px;
-  font-size: 1.8rem;
-  
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 20px;
+  min-width: 600px;
+}
+
+.abcd{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--color-secondary);
+  font-weight: 500;
 }

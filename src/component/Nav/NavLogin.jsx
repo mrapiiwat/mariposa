@@ -79,7 +79,7 @@ const NavLogin = () => {
               >
                 ENG
               </a>
-              <span className="just-span">|</span>
+              <span className="just-span2">|</span>
             </div>
           </div>
         </nav>

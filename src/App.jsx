@@ -1,6 +1,11 @@
 import "./App.css";
 import "./i18n.js";
-import {createBrowserRouter, RouterProvider, useParams, Navigate} from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useParams,
+  Navigate,
+} from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import { UserProvider } from "./utils/UserContext.jsx";
@@ -12,9 +17,13 @@ import MemberPage from "./mariposa/AboutPage/MemberPage/MemberPage";
 import Loader from "./component/Loader/Loader";
 import LoginPage from "./mariposa/LoginPage/LoginPage.jsx";
 import SelectRoom from "./mariposa/SelectRoom/SelectRoom.jsx";
-
 import Servicefee from "./mariposa/ServicePage/Servicefee.jsx";
 import Floorplan from "./mariposa/ServicePage/Floorplan.jsx";
+import ConferenceRoom from "./mariposa/ConferenceRoom/ConferenceRoom.jsx";
+import SingUp from "./mariposa/LoginPage/SingUp.jsx";
+import PageNotFound from "./mariposa/404/PageNotFound.jsx";
+import ProtectedRoute from "./utils/isAuthenticated.jsx";
+import useAuth from "./utils/useAuth.jsx";
 
 const LanguageWrapper = ({ children }) => {
   const { lang } = useParams(); // ดึงภาษาออกจาก URL path
@@ -26,84 +35,6 @@ const LanguageWrapper = ({ children }) => {
 
   return children;
 };
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Navigate to="/th/home" replace />,
-  },
-  {
-    path: "/:lang/home",
-    element: (
-      <LanguageWrapper>
-        <HomePage />
-      </LanguageWrapper>
-    ),
-  },
-  {
-    path: "/:lang/about",
-    element: (
-      <LanguageWrapper>
-        <AboutPage />
-      </LanguageWrapper>
-    ),
-  },
-  {
-    path: "/:lang/service",
-    element: (
-      <LanguageWrapper>
-        <ServicePage />
-      </LanguageWrapper>
-    ),
-  },
-  {
-    path: "/:lang/gameroom",
-    element: (
-      <LanguageWrapper>
-        <GameRoom />
-      </LanguageWrapper>
-    ),
-  },
-  {
-    path: "/:lang/about/member",
-    element: (
-      <LanguageWrapper>
-        <MemberPage />
-      </LanguageWrapper>
-    ),
-  },
-  {
-    path: "/:lang/room",
-    element: (
-      <LanguageWrapper>
-        <SelectRoom /> 
-      </LanguageWrapper>
-    ),
-  },
-
-  {
-    path: "/:lang/service/servicefee",
-    element: (
-      <LanguageWrapper>
-        <Servicefee />
-      </LanguageWrapper>
-    ),
-  },
-
-  {
-    path: "/:lang/service/floorplan",
-    element: (
-      <LanguageWrapper>
-        <Floorplan />
-      </LanguageWrapper>
-    ),
-  }
-]);
-import ConferenceRoom from "./mariposa/ConferenceRoom/ConferenceRoom.jsx";
-import SingUp from "./mariposa/LoginPage/SingUp.jsx";
-import PageNotFound from "./mariposa/404/PageNotFound.jsx";
-import ProtectedRoute from "./utils/isAuthenticated.jsx";
-import useAuth from "./utils/useAuth.jsx";
 
 function App() {
   const { isAuthenticated, login, logout } = useAuth(); // ดึงสถานะล็อกอินจาก useAuth
@@ -146,6 +77,23 @@ function App() {
       element: (
         <LanguageWrapper>
           <ServicePage />
+        </LanguageWrapper>
+      ),
+    },
+    {
+      path: "/:lang/servicefee",
+      element: (
+        <LanguageWrapper>
+          <Servicefee />
+        </LanguageWrapper>
+      ),
+    },
+
+    {
+      path: "/:lang/floorplan",
+      element: (
+        <LanguageWrapper>
+          <Floorplan />
         </LanguageWrapper>
       ),
     },
