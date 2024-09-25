@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Service detail CSS */
+.servicefee_con {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+}
+.servicefee{
+  height: calc(auto - 90px);
+  padding: 30px 50px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: center;
+}
+.servicefee_detail {
+  height: 90vh;
+  display: flex;
+  padding: 30px;
+  background-color: #e852342c;
+  border-radius: 35px;
+  font-size: 1.8rem;
+  
+}

@@ -16,6 +16,9 @@ import MemberPage from "./mariposa/AboutPage/MemberPage/MemberPage";
 import Loader from "./component/Loader/Loader";
 import SelectRoom from "./mariposa/SelectRoom/SelectRoom.jsx";
 
+import Servicefee from "./mariposa/ServicePage/Servicefee.jsx";
+import Floorplan from "./mariposa/ServicePage/Floorplan.jsx";
+
 const LanguageWrapper = ({ children }) => {
   const { lang } = useParams(); // ดึงภาษาออกจาก URL path
   const { i18n } = useTranslation();
@@ -80,6 +83,24 @@ const router = createBrowserRouter([
       </LanguageWrapper>
     ),
   },
+
+  {
+    path: "/:lang/service/servicefee",
+    element: (
+      <LanguageWrapper>
+        <Servicefee />
+      </LanguageWrapper>
+    ),
+  },
+
+  {
+    path: "/:lang/service/floorplan",
+    element: (
+      <LanguageWrapper>
+        <Floorplan />
+      </LanguageWrapper>
+    ),
+  }
 ]);
 
 function App() {
