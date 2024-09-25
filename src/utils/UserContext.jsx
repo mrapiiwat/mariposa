@@ -18,7 +18,7 @@ export const UserProvider = ({ children }) => {
     {
       name: "sukhatai",
       password: "65112429",
-      img: "../../public/mariposa-member/cream.jpg",
+      img: "../../public/mariposa-member/cream2.jpg",
     },
     {
       name: "naruemon",
@@ -27,13 +27,13 @@ export const UserProvider = ({ children }) => {
     },
     {
       name: "bhumipat",
-      password: "65111552s",
+      password: "65111552",
       img: "../../public/mariposa-member/tew.jpg",
     },
     {
       name: "piyathida",
-      password: "65112196",
-      img: "../../public/mariposa-member/fai.jpg",
+      password: "65112193",
+      img: "../../public/mariposa-member/fai2.jpg",
     },
     {
       name: "duanpen",

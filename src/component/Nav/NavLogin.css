@@ -96,12 +96,6 @@ nav {
           opacity: 0.8;
         }
       }
-      .just-span {
-        position: absolute;
-        left: 25px;
-        font-size: 2rem;
-        color: var(--color-secondary);
-      }
     }
   }
 }
