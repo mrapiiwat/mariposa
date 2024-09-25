@@ -24,6 +24,7 @@ import SingUp from "./mariposa/LoginPage/SingUp.jsx";
 import PageNotFound from "./mariposa/404/PageNotFound.jsx";
 import ProtectedRoute from "./utils/isAuthenticated.jsx";
 import useAuth from "./utils/useAuth.jsx";
+import CinemaRoom from "./mariposa/CinemaRoom/CinemaRoom.jsx";
 
 const LanguageWrapper = ({ children }) => {
   const { lang } = useParams(); // ดึงภาษาออกจาก URL path
@@ -137,6 +138,26 @@ function App() {
         <ProtectedRoute isAuthenticated={isAuthenticated}>
           <LanguageWrapper>
             <ConferenceRoom />
+          </LanguageWrapper>
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: "/:lang/cinemaroom",
+      element: (
+        <ProtectedRoute isAuthenticated={isAuthenticated}>
+          <LanguageWrapper>
+            <CinemaRoom />
+          </LanguageWrapper>
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: "/:lang/room",
+      element: (
+        <ProtectedRoute isAuthenticated={isAuthenticated}>
+          <LanguageWrapper>
+            <SelectRoom />
           </LanguageWrapper>
         </ProtectedRoute>
       ),
