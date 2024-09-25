@@ -96,6 +96,12 @@ nav {
           opacity: 0.8;
         }
       }
+      .just-span2 {
+        position: absolute;
+        left: 10px !important;
+        font-size: 2rem;
+        color: var(--color-secondary);
+      }
     }
   }
 }

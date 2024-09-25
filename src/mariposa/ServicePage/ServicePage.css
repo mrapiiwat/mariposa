@@ -1,5 +1,101 @@
+@import "../../component/color.css";
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
 
-.service-page-con {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Service detail CSS */
+.servicepage-con {
   font-family: "IBM Plex Sans Thai", sans-serif;
+}
+.servicepage{
+  height: calc(220vh - 90px);
+  padding: 30px 50px;
+  background-color: whitesmoke;
+}
+.service_detail {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background-color: #e852342c;
+  position: relative;
+  border-radius: 35px;
+  font-size: 1.8rem;
+}
+
+.service_detail_left {
+  border-right : 4px solid #ff1818;
+  width: 60%;
+  padding: 30px ;
+  color: var(--color-secondary);
+  .left_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .left_golink {
+    position: absolute;
+    bottom: 20px;
+  }
+}
+
+.service_detail_right {
+  width: 40%;
+  padding: 30px;
+  color: var(--color-secondary);
+  .right_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+}
+
+.right_week , .right_weekend {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+
+/* Service floorplan CSS */
+.service_floorplan {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background-color: #f2eee9;
+  position: relative;
+  border-radius: 35px;
+  font-size: 1.8rem;
+  margin-top: 80px;
+}
+
+.service_floorplan_left {
+  width: 50%;
+  padding: 30px ;
+  color: var(--color-secondary);
+  .floorplan_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .floorplan_golink {
+    position: absolute;
+    bottom: 20px;
+  }
+}
+
+.service_floorplan_right {
+  width: 50%;
+  padding: 30px;
+  .floorplan_img img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 35px;
+  }
 }

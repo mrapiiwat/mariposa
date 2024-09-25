@@ -1,0 +1,47 @@
+@import "../../component/color.css";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.servicefee_con {
+    font-family: "IBM Plex Sans Thai", sans-serif;
+}
+.servicefee{
+    height: calc(auto - 90px);
+    padding: 10px 50px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.servicefee_detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    border-radius: 35px;
+    font-size: 1.8rem;
+
+}
+.servicefee_title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+.floor1 {
+    width: 1000px;
+    height: 400px;
+    margin-bottom: 40px;
+    .picfloor1 {
+        width: 100%;
+        height: 100%;
+    }
+}
