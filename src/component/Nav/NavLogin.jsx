@@ -1,22 +1,28 @@
 import "./NavLogin.css";
 import { Link, useParams, useNavigate } from "react-router-dom"; // เพิ่ม useParams และ useNavigate
-import userPic from "../../assets/user.png";
 import mainlogo from "../../assets/libarylogo.png";
 import { MdOutlineExpandMore } from "react-icons/md";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Loader from "../Loader/Loader";
 import { useTranslation } from "react-i18next";
+import { useUser } from "../../utils/UserContext";
 
 const NavLogin = () => {
   const { lang } = useParams(); // ดึงค่าภาษาออกจาก URL
   const { i18n } = useTranslation();
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState([
-    {
-      name: "Guest",
-      img: userPic,
-    },
-  ]);
+  const { username, ourmember } = useUser(); // ดึง username จาก useUser
+
+  let userImg = "https://www.w3schools.com/howto/img_avatar.png";
+  // วนลูปเพื่อหารูปภาพของผู้ใช้งาน
+  ourmember.forEach((member) => {
+    if (member.name == username) {
+      userImg = member.img;
+    } else {
+      console.log("not found");
+    }
+  });
+
   const navigate = useNavigate(); // สร้าง navigate สำหรับการนำทาง
 
   const changeLanguage = (lng) => {
@@ -38,9 +44,12 @@ const NavLogin = () => {
           <div className="menu-con">
             <ul className="ul-nav-log">
               <li className="li-nav-log">
-                <img className="userPic" src={user[0].img} alt="" />
+                <img className="userPic" src={userImg} alt={username} />
                 <div className="user-con">
-                  <p className="p-name">{user[0].name}</p>
+                  <p className="p-name">
+                    {username.toString().charAt(0).toUpperCase() +
+                      username.toString().slice(1)}
+                  </p>
                   <MdOutlineExpandMore className="expand" />
                 </div>
               </li>

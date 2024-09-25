@@ -7,9 +7,9 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   animation: fade 2s;
-  
+
   @keyframes fade {
     from {
       opacity: 0;
@@ -68,7 +68,11 @@ nav {
         }
         .userPic {
           width: 40px;
+          height: 40px;
           border-radius: 50%;
+          object-fit: cover;
+          box-shadow: 1px 1px 5px 1px gray;
+          /* border: 2px solid var(--color-primary); */
         }
         .p-name {
           font-size: 1.2rem;

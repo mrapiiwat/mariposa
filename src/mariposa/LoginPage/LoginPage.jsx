@@ -1,15 +1,22 @@
 import Nav from "../../component/Nav/Nav";
 import "./LoginPage.css";
 import { useTranslation } from "react-i18next";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useNavigate, Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loader from "../../component/Loader/Loader";
+import { useUser } from "../../utils/UserContext";
 
-function LoginPage() {
-  const [loading, setLoading] = useState(false);
+function LoginPage({ onLogin }) {
+  const { setUsername, ourmember } = useUser(); // ดึงฟังก์ชัน setUsername ออกมาจาก Context
   const { lang } = useParams(); // ดึงค่าภาษาออกจาก URL
   const { t, i18n } = useTranslation();
   const navigate = useNavigate(); // สร้าง navigate สำหรับการนำทาง
+
+  // เพิ่ม state สำหรับเก็บ username และ password
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng); // เปลี่ยนภาษาโดยใช้ฟังก์ชัน changeLanguage
@@ -19,6 +26,22 @@ function LoginPage() {
   useEffect(() => {
     i18n.changeLanguage(lang); // เปลี่ยนภาษาตาม URL path
   }, [lang, i18n]);
+
+  const handleLogin = () => {
+    for (let i = 0; i < ourmember.length; i++) {
+      if (user === ourmember[i].name && password === ourmember[i].password) {
+        // ถ้าตรง -> ให้เปลี่ยนเส้นทาง
+        setUsername([user]); // อัปเดตชื่อผู้ใช้งาน
+        onLogin();
+        navigate(`/${lang}/room`);
+      } else {
+        setUser("");
+        setPassword("");
+        // ถ้าไม่ตรง -> แสดงข้อความแจ้งเตือน
+        setError("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง");
+      }
+    }
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -40,17 +63,32 @@ function LoginPage() {
               <div className="login-box">
                 <div className="userinput-con">
                   <label>ชื่อผู้ใช้งาน หรือ อีเมล</label>
-                  <input type="text" />
+                  <input
+                    type="text"
+                    value={user}
+                    onChange={(e) => setUser(e.target.value)}
+                  />
                 </div>
 
                 <div className="passwordinput-con">
                   <label>รหัสผ่าน</label>
-                  <input type="password" />
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
                 </div>
+
+                {error && (
+                  <p className="error-mes" style={{ color: "red" }}>
+                    {error}
+                  </p>
+                )}
+
                 <div className="login-btn-con">
-                  <Link to={`/${lang}/room`} className="log-btn">
+                  <button onClick={handleLogin} className="log-btn">
                     เข้าสู่ระบบ
-                  </Link>
+                  </button>
                   <Link to={`/${lang}/singup`} className="nolog-btn">
                     ยังไม่ได้เป็นสมาชิก?
                   </Link>
