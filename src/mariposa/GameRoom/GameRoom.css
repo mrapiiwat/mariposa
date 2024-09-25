@@ -6,8 +6,74 @@
   padding: 0;
   box-sizing: border-box;
 }
-.game-room-con {
+
+.table-booking{
   font-family: "IBM Plex Sans Thai", sans-serif;
+  padding: 20px 0 0 30px;
   background-color: whitesmoke;
-  height: calc(100vh - 90px);
+  height: 70vh;
+  position: relative;
+  display: flex;
+  .gameroom-booking-detail-con{
+    .gameroom-booking-detail{
+      background-color: var(--color-primary);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 260px;
+      padding: 5px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+  .gameroom-booking-table-detail{
+    display: grid;
+    grid-template-columns: repeat(19,1fr);
+    grid-template-rows: repeat(7,49px);
+    row-gap: 11px;
+    margin-left: 10px;
+    width: 100%;
+    
+    .gameroom-checkbox{
+      
+      display:flex ;
+      justify-content: center;
+      align-items: center;
+      .gameroom-lable{
+        border: none;
+        .gameroom-select{
+          width: 40px;
+          height: 40px;
+          margin-top: 5px;
+          border: 10px solid red;
+  
+        }
+      }
+      
+    }
+    .gameroom-btn{
+      font-family: "IBM Plex Sans Thai", sans-serif;
+      padding: 10px 60px;
+      position: absolute;
+      bottom: -5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      right: 40%;
+      background-color:#e85234 ;
+      color: white;
+      cursor: pointer;
+      &:hover{
+        opacity: 0.9;
+      }
+      &:active{
+        opacity: 1; 
+      }
+    }
+  }
 }

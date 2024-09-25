@@ -57,6 +57,7 @@ nav {
         text-decoration: none;
         font-weight: 600;
         color: var(--color-secondary);
+        cursor: pointer;
         &:hover {
           opacity: 0.8;
         }

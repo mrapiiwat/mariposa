@@ -2,45 +2,61 @@ import Nav from "../../component/Nav/Nav";
 import "./AboutPage.css";
 import logo2 from "../../assets/mariposalogo2.png";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link ,useParams} from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const AboutPage = () => {
+  const { t } = useTranslation();
+  const { lang } = useParams(); // ดึงค่าภาษาออกจาก URL
   const [member, setMember] = useState([
+    
     {
-      fullName: "นายอิภิวัฒน์ ลานทอง",
-      duty: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.",
-      imgSm: "https://via.placeholder.com/200",
-      imgLg: "https://via.placeholder.com/350",
+      fullName: `นายอภิวัฒน์ ลานทอง`,
+      Name:`นายอภิวัฒน์`,
+      LastName:`ลานทอง`,
+      duty: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.`,
+      imgSm: "../../../public/mariposa-member/rif.jpg",
+      imgLg: "../../../public/mariposa-member/rif.jpg",
     },
     {
       fullName: "นางสาวนฤมล สีละมุด",
+      Name:"นางสาวนฤมล",
+      LastName:"สีละมุด",
       duty: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.",
-      imgSm: "https://via.placeholder.com/200",
-      imgLg: "https://via.placeholder.com/350",
+      imgSm: "../../../public/mariposa-member/kea.jpg",
+      imgLg: "../../../public/mariposa-member/kea.jpg",
     },
     {
       fullName: "นางสาวสุขหทัย พลยะเรศ",
+      Name:"นางสาวสุขหทัย",
+      LastName:"พลยะเรศ",
       duty: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.",
-      imgSm: "https://via.placeholder.com/200",
-      imgLg: "https://via.placeholder.com/350",
+      imgSm: "../../../public/mariposa-member/cream.jpg",
+      imgLg: "../../../public/mariposa-member/cream.jpg",
     },
     {
       fullName: "นางสาวเดือนเพ็ญ โฉมฉาย",
+      Name:"นางสาวเดือนเพ็ญ",
+      LastName:"โฉมฉาย",
       duty: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.",
-      imgSm: "https://via.placeholder.com/200",
-      imgLg: "https://via.placeholder.com/350",
+      imgSm: "../../../public/mariposa-member/tam.jpg",
+      imgLg: "../../../public/mariposa-member/tam.jpg",
     },
     {
       fullName: "นางสาวปิยธิดา อันชม",
+      Name:"นางสาวปิยธิดา",
+      LastName:"อันชม",
       duty: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.",
-      imgSm: "https://via.placeholder.com/200",
-      imgLg: "https://via.placeholder.com/350",
+      imgSm: "../../../public/mariposa-member/fai.jpg",
+      imgLg: "../../../public/mariposa-member/fai.jpg",
     },
     {
       fullName: "นายภูมิพัฒน์ เวฬุฬวรรณราช",
+      Name:"นายภูมิพัฒน์",
+      LastName:"เวฬุฬวรรณราช",
       duty: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam iste modi atque distinctio commodi ducimus.",
-      imgSm: "https://via.placeholder.com/200",
-      imgLg: "https://via.placeholder.com/350",
+      imgSm: "../../../public/mariposa-member/tew.jpg",
+      imgLg: "../../../public/mariposa-member/tew.jpg",
     },
   ]);
 
@@ -53,27 +69,25 @@ const AboutPage = () => {
         </div>
         <div className="about-uni-name">
           <h2 className="name-uni-aboutPage">
-            หอสมุด
+            {t("Library")}
             <br />
-            หมาวิยาลัยเมริโพซ่า
+            {t("mariposaU")}
           </h2>
         </div>
         <div className="aboutPage-content-con">
           <p className="aboutPage-text">
-            หอสมุดหมาวิทยาลัยแมริโพซ่าเป็นโปรเจกต์ <br /> ของรายวิชา CE 385
-            การออกแบบสถาปัตยกรรมแอปพลิเคชั่น <br /> จัดทําโดยคณะผู้จัดทํา
-            นักศึกษาชั้นปีที่ 3 วิทยาลัยนวัตกรรมด้านเทคโนโลยีและวิศวกรรมศาสตร์{" "}
-            <br /> สาขาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยธุรกิจบัณฑิตย์
+            {t('aboutpage-text-1')} <br /> {t('aboutpage-text-2')} <br /> {t('aboutpage-text-3')}
+            <br /> {t('aboutpage-text-4')}
           </p>
         </div>
       </div>
       <div className="memmer-con">
-        <h4 className="h4-about">คณะผู้จัดทํา</h4>
+        <h4 className="h4-about">{t('aboutpage-production-team')}</h4>
         <div className="member">
           {member.map((member, index) => {
             return (
               <div className="member-card" key={index}>
-                <Link to={"member"} state={{ member }}>
+                <Link to={`/${lang}/about/member`} state={{ member }}>
                   <img
                     className="member-about-img"
                     src={member.imgSm}
