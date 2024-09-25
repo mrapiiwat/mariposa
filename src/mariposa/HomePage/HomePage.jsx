@@ -3,6 +3,7 @@ import Nav from "../../component/Nav/Nav";
 import "./HomePage.css";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import Loader from "../../component/Loader/Loader";
 
 const HomePage = () => {
   const { lang } = useParams(); // ดึงค่าภาษาออกจาก URL

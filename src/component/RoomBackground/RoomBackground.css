@@ -54,7 +54,7 @@
   .room-date-now {
     text-align: center;
     background-color: var(--color-primary);
-    width: 350px;
+    width: 370px;
     color: white;
   }
 }

@@ -8,12 +8,13 @@
 }
 
 .login-page {
-  background-color: whitesmoke;
   height: calc(100vh - 90px);
   background-image: url("../../assets/libarybackground.jpg");
   background-size: cover;
   background-position: calc(100px - 30px) 70%;
   font-family: "IBM Plex Sans Thai", sans-serif;
+  position: fixed;
+  width: 100%;
 }
 
 .login-box-con {
@@ -25,10 +26,9 @@
   position: relative;
   .blur-login-backgound {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 90px);
     background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;
+    position: fixed;
   }
   .login-box {
     width: 430px;
