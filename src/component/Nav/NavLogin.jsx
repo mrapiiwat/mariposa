@@ -31,7 +31,7 @@ const NavLogin = () => {
       ) : (
         <nav>
           <div className="logo-con">
-            <Link to="/">
+            <Link to={`/${lang}/room`}>
               <img className="main-logo" src={mainlogo} alt="main logo" />
             </Link>
           </div>
