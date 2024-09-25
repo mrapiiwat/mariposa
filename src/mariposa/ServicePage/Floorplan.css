@@ -7,19 +7,19 @@
     box-sizing: border-box;
 }
 
-.servicefee_con {
+.floorplanpage_con {
     font-family: "IBM Plex Sans Thai", sans-serif;
 }
-.servicefee{
+.floorplanpage{
     height: calc(auto - 90px);
-    padding: 10px 50px;
+    padding: 10px 50px !important;
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
 }
-.servicefee_detailabc {
+.floorplanpage_detail {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,17 +30,18 @@
     font-size: 1.8rem;
 
 }
-.servicefee_title {
+.floorplanpage_title {
     font-size: 2rem;
     font-weight: bold;
     color: var(--color-secondary);
+    text-align: center;
 }
 
-.floor1 {
+.floor {
     width: 1000px;
     height: 400px;
-    margin-bottom: 40px;
-    .picfloor1 {
+    margin-bottom: 60px;
+    .picfloor {
         width: 100%;
         height: 100%;
     }

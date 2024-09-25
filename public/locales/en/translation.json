@@ -36,7 +36,7 @@
   "left_title":"Available for Students and the Public",
   "left_detail":"Mariposa University Library is open to the public during opening hours. Service fee is 20 baht per visit.",
   "left_servicedetail":"The Mariposa University Library website offers the following services",
-  "left_li1":"Book a meeting room (fees apply for public use)",
+  "left_li1":"Book a conference room (fees apply for public use)",
   "left_li2":"Book a movie cinema room or game room (students only)",
   "left_golink":"Click here to view service fee for the public",
 
@@ -45,8 +45,8 @@
   "right_day1":"Monday - Friday",
   "right_time1":"8:30 am – 6:00 pm",
 
-  "right_day2":"Weekends",
-  "right_time2":"9:00 am – 6:00 pm",
+  "right_day2":"Weekends ",
+  "right_time2":" 9:00 am – 6:00 pm",
 
   "right_day3":"Holiday",
   "right_time3":"Closed",
@@ -56,8 +56,22 @@
   "floorplan_detail":"We offer a new library service like nothing you’ve experienced before.",
   "floorplan_li1":"1st Floor: Main library ",
   "floorplan_li2":"2nd Floor: Co-working Space",
-  "floorplan_li3":"3rd Floor: Meeting rooms ",
+  "floorplan_li3":"3rd Floor: Conference rooms ",
   "floorplan_li4":"4th Floor: Cinema, Game Rooms, and Relaxation Area (students only) ",
-  "floorplan_golink":"Click here to view the library floor plan"
+  "floorplan_golink":"Click here to view the library floor plan",
 
+
+  "floorplanpage_title1":"First Floor: Main library",
+  "floorplanpage_title2":"Second Floor: Co-working Space",
+  "floorplanpage_title3":"Third Floor: Meeting rooms ",
+  "floorplanpage_title4":"Fourth Floor: Cinema, Game Rooms, and Relaxation Area",
+
+
+  "servicefee_title":"Service fees for The Public",
+  "listofservice1":"Book a small meeting room",
+  "listofservice2":"20 Baht/half an hour",
+  "listofservice3":"Book a medium meeting room",
+  "listofservice4":"30 Baht/half an hour",
+  "listofservice5":"Book a large meeting room",
+  "listofservice6":"50 Baht/half an hour"
 }

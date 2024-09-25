@@ -82,6 +82,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 5px;
+    margin-right: 25%;
   }
   .floorplan_golink {
     position: absolute;
@@ -97,5 +98,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 35px;
+    margin-left: 10%;
+    margin-top:3%;
   }
 }

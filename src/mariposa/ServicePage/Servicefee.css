@@ -1,48 +1,53 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* Service detail CSS */
 .servicefee_con {
   font-family: "IBM Plex Sans Thai", sans-serif;
 }
-.servicefee{
+
+.servicefee {
   height: calc(100vh - 90px);
   background-color: whitesmoke;
   padding: 30px 50px !important;
 }
 
-.servicefee_detail{
+.servicefee_detail {
   display: flex;
   flex-direction: column;
   background-color: #e8523428;
   width: 100%;
   height: 100%;
-  justify-content: start;
+  justify-content: flex-start; /* จัดให้อยู่บนของกล่อง */
+  align-items: center;
+  border-radius: 35px;
+  padding: 20px;
 }
 
-.servicefee_title{
-  margin-top: 20px;
+.servicefee_title {
+  margin-top: 40px;
   margin-bottom: 50px;
   font-size: 2.5rem;
   font-weight: 700;
+  text-align: center;
+  color: var(--color-secondary);
 }
 
-.servicefee_divst{
+.servicefee_list {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start; /* จัดให้อยู่บนของกล่อง */
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   margin-bottom: 20px;
   min-width: 600px;
+  text-align: center;
+  border-radius: 15px;
+  padding: 20px;
 }
 
-.abcd{
+.listofservice {
   display: flex;
   justify-content: space-between;
   width: 100%;
   color: var(--color-secondary);
   font-weight: 500;
+  text-align: center;
+  font-size: 1.5rem;
 }
