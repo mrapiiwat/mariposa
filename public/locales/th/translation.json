@@ -60,6 +60,17 @@
   "floorplan_li2":"ชั้น 2: พื้นที่ Co-working Space",
   "floorplan_li3":"ชั้น 3: ห้องประชุมขนาดต่างๆ",
   "floorplan_li4":"ชั้น 4: โรงภาพยนตร์ขนาดเล็ก ห้องเกม และพื้นที่พักผ่อน (สงวนสิทธิ์แก่นักศึกษาเท่านั้น)",
-  "floorplan_golink":"คลิกเพื่อดูรายละเอียดแผนผังหอสมุด"
+  "floorplan_golink":"คลิกเพื่อดูรายละเอียดแผนผังหอสมุด",
+
+  "cinemaroom-booking-detail1":"ห้อง 1 (6คน)",
+  "cinemaroom-booking-detail2":"ห้อง 2 (6คน)",
+  "cinemaroom-booking-detail3":"ห้อง 3 (6คน)",
+  "cinemaroom-booking-detail4":"ห้อง 4 (12คน)",
+  "cinemaroom-booking-detail5":"ห้อง 5 (12คน)",
+  "cinemaroom-booking-detail6":"ห้อง 6 (12คน)",
+  "cinemaroom-booking-detail7":"ห้อง 7 (22คน)",
+
+
+  "cinemaroom-btn":"จอง"
 
 }
