@@ -1,0 +1,114 @@
+@import "../../component/color.css";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sing-up-page {
+  height: calc(100vh - 90px);
+  background-image: url("../../assets/libarybackground.jpg");
+  background-size: cover;
+  background-position: calc(100px - 30px) 70%;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blursingup {
+  width: 100%;
+  height: calc(100vh - 90px);
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: -1;
+}
+
+.box-singup {
+  background-color: var(--color-tertiary);
+  width: 900px;
+  height: 410px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.sing-up-top {
+  width: 100%;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .sing-up-left {
+    height: 100%;
+    width: 50%;
+  }
+  .sing-up-right {
+    height: 100%;
+    width: 50%;
+  }
+}
+
+.sing-up-but {
+  width: 100%;
+  height: calc(450px - 330px);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.sing-up-btn {
+  background-color: var(--color-primary);
+  border: none;
+  color: white;
+  width: 250px;
+  height: 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: #d84c2f;
+  }
+  &:active {
+    background-color: #bc351a;
+  }
+}
+
+.sing-up-left,.sing-up-right{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sing-up-left-top,
+.sing-up-left-bot,
+.sing-up-right-top,
+.sing-up-right-bot {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    font-weight: 700;
+  }
+  input{
+    padding: 10px ;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 3px solid var(--color-secondary);
+    margin-bottom: 20px;
+  }
+}

@@ -1,11 +1,9 @@
-import { Link, useParams, useNavigate } from "react-router-dom";
-import Nav from "../../component/Nav/Nav";
-import "./HomePage.css";
+import { Navigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import Loader from "../../component/Loader/Loader";
 
-const HomePage = () => {
+function ProtectedRoute({ isAuthenticated, children }) {
   const { lang } = useParams(); // ดึงค่าภาษาออกจาก URL
   const { t, i18n } = useTranslation();
   const navigate = useNavigate(); // สร้าง navigate สำหรับการนำทาง
@@ -18,23 +16,10 @@ const HomePage = () => {
   useEffect(() => {
     i18n.changeLanguage(lang); // เปลี่ยนภาษาตาม URL path
   }, [lang, i18n]);
+  if (!isAuthenticated) {
+    return <Navigate to={`/${lang}/login`} replace />;
+  }
+  return children;
+}
 
-  return (
-    <div className="home-page-con">
-      <Nav />
-      <main className="homePage-main-content">
-        <div className="bulr-back"></div>
-        <div className="home-content">
-          <h1 className="home-h1">
-            {t('Library')}
-            <br />
-            {t('mariposaU')}
-          </h1>
-          <Link to={`/${lang}/login`} className="home-login-btn">{t('Log-in')}</Link>
-        </div>
-      </main>
-    </div>
-  );
-};
-
-export default HomePage;
+export default ProtectedRoute;

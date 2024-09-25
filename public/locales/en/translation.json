@@ -1,6 +1,6 @@
 {
   "Log-in": "Sign in",
-  "Library" : "MARIPOSA",
+  "Library": "MARIPOSA",
   "mariposaU": "UNIVERSITY LIBARY",
   "About": "About",
   "Service": "Service",
@@ -16,8 +16,9 @@
   "gameroom-rules-1": " Number of users must not less than 3 people.",
   "gameroom-rules-2": " The room can be used for 2 hours at a time. If you are more than 15 minutes late, your reservation will be considered void.",
   "gameroom-rules-3": " Please check in at the counter when it is time to use the service and contact the counter again when you finish.",
-  "gameroom-opening":"Opening Hours: Monday - Friday 8:30 am - 6:00 pm / Weekends 9:00 am - 6:00 pm",
+  "gameroom-opening": "Opening Hours: Monday - Friday 8:30 am - 6:00 pm / Weekends 9:00 am - 6:00 pm",
 
+  "conference-title": "Conference Room",
   "conroom-title": "Conference Room",
   "cinema-title": "Cinema Room",
 

@@ -1,5 +1,4 @@
 import "./RoomBackground.css";
-import aa from "../../assets/gameroom.jpg";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
