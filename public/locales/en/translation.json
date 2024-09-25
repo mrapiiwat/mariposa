@@ -58,6 +58,16 @@
   "floorplan_li2":"2nd Floor: Co-working Space",
   "floorplan_li3":"3rd Floor: Meeting rooms ",
   "floorplan_li4":"4th Floor: Cinema, Game Rooms, and Relaxation Area (students only) ",
-  "floorplan_golink":"Click here to view the library floor plan"
+  "floorplan_golink":"Click here to view the library floor plan",
+
+  "cinemaroom-booking-detail1":"Room 1 (6 people)",
+  "cinemaroom-booking-detail2":"Room 2 (6 people)",
+  "cinemaroom-booking-detail3":"Room 3 (6 people)",
+  "cinemaroom-booking-detail4":"Room 4 (12 people)",
+  "cinemaroom-booking-detail5":"Room 5 (12 people)",
+  "cinemaroom-booking-detail6":"Room 6 (12 people)",
+  "cinemaroom-booking-detail7":"Room 7 (22 people)",
+  
+  "cinemaroom-btn":"Book"
 
 }
