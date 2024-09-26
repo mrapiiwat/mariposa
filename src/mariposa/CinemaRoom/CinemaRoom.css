@@ -1,0 +1,88 @@
+@import "../../component/color.css";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table-booking {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  padding: 20px 0 0 30px;
+  background-color: whitesmoke;
+  height: auto;
+  display: flex;
+  .cinemaroom-booking-detail-con {
+    .cinemaroom-booking-detail {
+      background-color: var(--color-primary);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 260px;
+      padding: 5px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+  .cinemaroom-booking-table-detail {
+    display: grid;
+    grid-template-columns: repeat(19, 1fr);
+    grid-template-rows: repeat(7, 49px);
+    row-gap: 11px;
+    margin-left: 10px;
+    width: 100%;
+
+    .cinemaroom-checkbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .cinemaroom-lable {
+        border: none;
+        .cinemaroom-select {
+          width: 40px;
+          height: 40px;
+          margin-top: 5px;
+          border: 10px solid red;
+        }
+      }
+    }
+  }
+}
+
+.cinemaroom-booking-table-detail-con {
+  width: calc(100% - 270px);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.cinemaroom-btn {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  padding: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background-color: #e85234;
+  margin: 20px 0;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+  &:active {
+    opacity: 1;
+  }
+}
+
+.cinemaroom-btn-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

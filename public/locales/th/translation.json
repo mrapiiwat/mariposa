@@ -1,13 +1,13 @@
 {
   "Log-in": "เข้าสู่ระบบ",
   "Library" : "หอสมุด",
-  "mariposaU": "มหาวิทยาลัยเมริโพซ่า",
+  "mariposaU": "มหาวิทยาลัยแมริโพซ่า",
   "About": "เกี่ยวกับเรา",
   "Service": "บริการ",
 
-  "aboutpage-text-1": "หอสมุดหมาวิทยาลัยแมริโพซ่าเป็นโปรเจกต์",
+  "aboutpage-text-1": "หอสมุดมหาวิทยาลัยแมริโพซ่าเป็นโปรเจกต์",
   "aboutpage-text-2": "ของรายวิชา CE 385 การออกแบบสถาปัตยกรรมแอปพลิเคชั่น",
-  "aboutpage-text-3": "จัดทําโดยคณะผู้จัดทํา นักศึกษาชั้นปีที่ 3 วิทยาลัยนวัตกรรมด้านเทคโนโลยีและวิศวกรรมศาสตร์",
+  "aboutpage-text-3": "จัดทําโดย คณะผู้จัดทํา นักศึกษาชั้นปีที่ 3 วิทยาลัยนวัตกรรมด้านเทคโนโลยีและวิศวกรรมศาสตร์",
   "aboutpage-text-4": "สาขาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยธุรกิจบัณฑิตย์",
   "aboutpage-production-team": "คณะผู้จัดทํา",
 
@@ -75,7 +75,18 @@
   "listofservice3":"จองห้องประชุมขนาดกลาง",
   "listofservice4":"ครึ่งชั่วโมง 30 บาท",
   "listofservice5":"จองห้องประชุมขนาดใหญ่",
-  "listofservice6":"ครึ่งชั่วโมง 50 บาท"
+  "listofservice6":"ครึ่งชั่วโมง 50 บาท",
 
+
+  "cinemaroom-booking-detail1":"ห้อง 1 (6คน)",
+  "cinemaroom-booking-detail2":"ห้อง 2 (6คน)",
+  "cinemaroom-booking-detail3":"ห้อง 3 (6คน)",
+  "cinemaroom-booking-detail4":"ห้อง 4 (12คน)",
+  "cinemaroom-booking-detail5":"ห้อง 5 (12คน)",
+  "cinemaroom-booking-detail6":"ห้อง 6 (12คน)",
+  "cinemaroom-booking-detail7":"ห้อง 7 (22คน)",
+
+
+  "cinemaroom-btn":"จอง"
 
 }

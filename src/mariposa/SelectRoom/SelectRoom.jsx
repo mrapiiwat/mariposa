@@ -42,7 +42,7 @@ const SelectRoom = () => {
                   <h1 className="conroomtext">{t("conroom-title")}</h1>
                 </div>
               </Link>
-              <Link to={`/${lang}/...`}>
+              <Link to={`/${lang}/cinemaroom`}>
                 <div className="cineroom">
                   <div className="blurcineroom"></div>
                   <h1 className="cineroomtext">{t("cinema-title")}</h1>
