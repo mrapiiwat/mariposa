@@ -45,20 +45,20 @@ const ServicePage = () => {
             <div className="right_title">{t("right_title")}</div>
 
             <div className="right_week">
-              <div className="right_day1">จันทร์ - ศุกร์</div>
-              <div className="right_time1">เวลา 8:30 -18:00</div>
+              <div className="right_day1">{t("right_day1")}</div>
+              <div className="right_time1">{t("right_time1")}</div>
             </div>
 
             <div className="right_weekend">
-              <div className="right_day2">เสาร์ - อาทิตย์</div>
-              <div className="right_time2">เวลา 9:00 -18:00</div>
+              <div className="right_day2">{t("right_day2")}</div>
+              <div className="right_time2">{t("right_time2")}</div>
             </div>
 
             <div className="right_holiday">
-              <div className="right_day3">วันหยุดราชการ</div>
-              <div className="right_time3">ปิดให้บริการ</div>
+              <div className="right_day3">{t("right_day3")}</div>
+              <div className="right_time3">{t("right_time3")}</div>
               <div className="right_note">
-                หมายเหตุ: เวลาทำการอาจปรับเปลี่ยนได้ตามความเหมาะสม
+                {t("right_note")}
               </div>
             </div>
           </div>
